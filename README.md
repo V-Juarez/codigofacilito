@@ -5,9 +5,13 @@ Sat Nov  7 11:29:11 HAC 2020
 
 
 ------------- Configuracion git inicio -----------------
+
 git config --list
-git config --globla
+
+git config --global
 
 git add --all
+
 git commit -m "mesnaje"
+
 git push orign <master> rama

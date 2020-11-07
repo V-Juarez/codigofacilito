@@ -12,8 +12,12 @@ git config --global
 
 git add --all
 
-git commit -m "mesnaje"
+git commit -m "mensaje"
 
 git push orign <master> rama 
 
-git log --graph 
+ git log --graph 
+
+git commit --amend
+
+

@@ -16,9 +16,16 @@ git commit -m "mensaje"
 
 git push orign <master> rama 
 
- git log --graph 
+git log
+ 
+	git log --graph 
+	
+	git log --oneline
+	
+	git commit --amend 
+	
+	git commit -- amend -m "Nuevo mensaje"
 
-git commit --amend 
-git commit -- amend -m "Nuevo mensaje"
+	git diff
 
-
+	git difftool 

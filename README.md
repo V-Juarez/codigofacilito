@@ -14,4 +14,6 @@ git add --all
 
 git commit -m "mesnaje"
 
-git push orign <master> rama
+git push orign <master> rama 
+
+git log --graph 

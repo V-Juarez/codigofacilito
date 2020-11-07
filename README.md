@@ -16,6 +16,7 @@ Sat Nov  7 11:29:11 HAC 2020
 
 	git commit -m "mensaje"
 
+
 	git push orign <master> rama 
 
 	git log
@@ -51,5 +52,7 @@ Etiquetas git tag newfolder number
 	git branch --list
 
 
------------- 
+------------ hacer un merge ----------------------
+
+	git merge example 
 

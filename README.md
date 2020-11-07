@@ -54,5 +54,10 @@ Etiquetas git tag newfolder number
 
 ------------ hacer un merge ----------------------
 
-	git merge example 
+	git merge example1
 
+	git blame archivo -> nuestra los cambios realizados 
+
+	git blame -L5,10 README.md
+
+	git branch -D example1 -> elimina la rama 

@@ -6,18 +6,23 @@ Sat Nov  7 11:29:11 HAC 2020
 
 ------------- Configuracion git inicio -----------------
 
-git config --list
+	git config --list
 
-git config --global
+	git config --global
 
-git add --all
+	git add --all
+	
+	git add .
 
-git commit -m "mensaje"
+	git commit -m "mensaje"
 
-git push orign <master> rama 
+	git push orign <master> rama 
 
-git log
- 
+	git log
+
+
+------------ ver datos en pantalla ----------------
+
 	git log --graph 
 	
 	git log --oneline
@@ -29,3 +34,22 @@ git log
 	git diff
 
 	git difftool 
+
+Etiquetas git tag newfolder number
+
+	git checkout  -> moverse entre los commits
+
+	
+------------ crear una nueva rama -----------------
+
+	  git switch -c nombre <nueva rama>
+
+------------ en listar las ramas ------------------
+
+	git branch	
+
+	git branch --list
+
+
+------------ 
+

@@ -38,7 +38,11 @@ Sat Nov  7 11:29:11 HAC 2020
 
 Etiquetas git tag newfolder number
 
-	git checkout  -> moverse entre los commits
+	git checkout  -> moverse entre las ramas
+
+	git checkout -b example2 -> creamos a nueva rama y/o commits
+
+	git branch -m "example2" -> Renombrar las ramas
 
 	
 ------------ crear una nueva rama -----------------
@@ -60,4 +64,6 @@ Etiquetas git tag newfolder number
 
 	git blame -L5,10 README.md
 
-	git branch -D example1 -> elimina la rama 
+	git branch -D example1 -> elimina la rama
+
+	git checkout -> movernos en las ramas

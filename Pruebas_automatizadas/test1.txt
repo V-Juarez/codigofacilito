@@ -1,0 +1,10 @@
+>>> from algoritmos import fibonacci
+>>> fibonacci(12)
+144
+
+
+>>> fibonacci(16)
+987
+
+>>> fibonacci(20)
+6765

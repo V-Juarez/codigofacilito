@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title Bienvenido
+  body 
+    h1= user.email
+    p
+      span usuarios conectados:
+      span#connected
+    form(action='/sessions?_method=DELETE' method="POST")
+      input(type="submit" value="Cerrar sesion")
+    script(src="/socket.io/socketio.js")
+    script.
+      socket = io.connect()
+      
+      socket.on('count_updated',function(data){
+        console.log(data);
+        document.querySelector('#connected').innerHTML = data.count
+        })

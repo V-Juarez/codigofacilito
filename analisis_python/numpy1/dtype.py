@@ -1,0 +1,17 @@
+# coding: utf-8
+np.array( [1, 2, 3, 4, 5] )
+get_ipython().run_line_magic('clear', '')
+import numpy as np
+np.array( [1, 2, 3, 4, 5] )
+np.array( [1, 2, 3, 4, 5], dtype='f')
+np.array( [1, 2, 3, 4, 5], dtype=np.float32)
+np.array( [1, 2.3, 3.4, 5.6, 7.8, 9.1] )
+np.array( [1, 2.3, 3.4, 5.6, 7.8, 9.1] dtype=float32)
+np.array( [1, 2.3, 3.4, 5.6, 7.8, 9.1], dtype=float32)
+np.array( [1, 2.3, 3.4, 5.6, 7.8, 9.1], dtype=np.float32)
+np.array( [1, 2.3, 3.4, 5.6, 7.8, 9.1], dtype='i')
+np.array( [1, 2.3, 3.4, 5.6, 7.8, 9.1], dtype=np.integer)
+get_ipython().run_line_magic('clear', '')
+np.array( [1, 0, 0, 1, 0, 1] )
+np.array( [1, 0, 0, 1, 0, 1], dtype='?' )
+np.array( [1, 0, 0, 1, 0, 1], dtype=np.bool)

@@ -1,0 +1,6 @@
+apollo/node_modules
+crud-graphql/node_modules
+hello-word/node_modules
+hello-world/node_modules
+
+**/node_modules

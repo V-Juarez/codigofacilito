@@ -1,0 +1,9 @@
+doctype html
+html
+  head
+    title Tareas
+  body
+      
+    form(action=`/tasks/${task.id}?_method=PUT` method="POST")
+        textarea(name="description" placeholder="Qué pendiente vas a guardar")=task.description
+        input(type="submit" value="Guardar")

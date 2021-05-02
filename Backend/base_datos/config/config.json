@@ -1,0 +1,27 @@
+{
+  "development": {
+    "username": null,
+    "password": null,
+    "database": "proyecto-backend",
+    "host": "127.0.0.1",
+    "dialect": "sqlite",
+    "storage": "./proyecto-backend.sqlite3",
+    "operatorsAliases": true
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": true
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": true
+  }
+}

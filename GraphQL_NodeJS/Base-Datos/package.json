@@ -1,0 +1,20 @@
+{
+  "name": "Base-Datos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.17.0",
+    "express-graphql": "^0.8.0",
+    "graphql": "^14.3.0",
+    "graphql-tools": "^4.0.4",
+    "mongoose": "5.5.10"
+  }
+}

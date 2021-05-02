@@ -1,0 +1,26 @@
+# coding: utf-8
+import numpy as np
+np.array( [1, 2, 3], dtype=np.float32 )
+np.arange(0, 10)
+np.arange(0, 20)
+np.arange(0, 20, 2)
+np.zeros(10)
+np.zeros(10, dtype=np.integer)
+np.ones(10, dtype=np.integer)
+np.full(10, 5)
+np.full(10, 2.5)
+np.random.random(15)
+np.random.random(15)
+np.random.random(15) * 10
+np.random.randint(0, 25, 10)
+np.random.randint(0, 25, 10)
+np.random.randint(0, 50, 200)
+# array
+# arange(0, 10, 2)
+# zeros(10) ones(5)
+#full(10, 5)
+#np.random.random(10)
+#np.random.randint(0, 12, 10)
+np.linspace(0, 10, 10)
+np.linspace(1, 10, 10)
+np.linspace(1, 10, 20)

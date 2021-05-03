@@ -1588,15 +1588,46 @@ docker network inspect br02
 
 ## Overview docker machine
 
-
+- [Install Docker Machine](https://docs.docker.com/machine/install-machine/)
 
 ## Creando máquina digitalocean
 
+- [DigitalOcean](https://cloud.digitalocean.com/)
+ 
+Conectar docker machine atreves del token de digitalocean
 
+```bash
+dicker-machine create -d digitalocean --digitalocean-access-token=<ingresar-token> local 
+
+docker-machine ls
+```
 
 ## Accediendo al docker machine
 
+Comandos 
 
+```bash
+# virtual
+docker-machine env local
+
+docker machine ls
+
+eval $(docker-machine env local)
+
+docker image pull nginx
+
+
+docker container run -d -p 80:80 nginx
+
+# Obtener ip local
+docker-machine ip local
+
+# docker ssh
+docker-machine ssh local
+
+# Eliminar docker-machine
+docker-machine rm local
+```
 
 # 7. Docker Compose
 

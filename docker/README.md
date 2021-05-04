@@ -4,7 +4,71 @@
 
 <h1>Tabla de Cotendio</h1>
 
-- [1. Introduccion](#1-Introduccion)
+- [1. Introduccion](#1-introduccion)
+  - [Introducción a Docker](#introducción-a-docker)
+  - [Conceptos](#conceptos)
+  - [Imagenes](#imagenes)
+  - [Contenedores](#contenedores)
+  - [Docker hub](#docker-hub)
+  - [Instalación](#instalación)
+  - [Hola Mundo](#hola-mundo)
+- [2. Contenedores](#2-contenedores)
+  - [Comandos Básicos](#comandos-básicos)
+  - [Modo Interactivo en Docker](#modo-interactivo-en-docker)
+  - [Ejecutar comandos dentro de un contenedor](#ejecutar-comandos-dentro-de-un-contenedor)
+  - [Puertos](#puertos)
+  - [Logs](#logs)
+  - [Commits](#commits)
+- [3. Volumenes](#3-volumenes)
+  - [Overview Volúmenes](#overview-volúmenes)
+  - [Creando Volúmenes](#creando-volúmenes)
+  - [Compartiendo archivos con contenedores](#compartiendo-archivos-con-contenedores)
+- [4. Imagenes](#4-imagenes)
+  - [Overview Imágenes](#overview-imágenes)
+  - [Dockerfile](#dockerfile)
+  - [Copiar archivos](#copiar-archivos)
+  - [Variables de entorno](#variables-de-entorno)
+  - [Argumentos](#argumentos)
+  - [Dockerignore](#dockerignore)
+  - [Trabajando con usuarios](#trabajando-con-usuarios)
+  - [Ejecutando comandos CMD](#ejecutando-comandos-cmd)
+  - [CMD VS ENTRYPOINT](#cmd-vs-entrypoint)
+  - [Contenerizar app](#contenerizar-app)
+  - [Subir imagen al docker hub](#subir-imagen-al-docker-hub)
+  - [Para subir un contemedor a docker hub](#para-subir-un-contemedor-a-docker-hub)
+- [5. Redes](#5-redes)
+  - [Redes en Docker](#redes-en-docker)
+  - [Inspeccionado redes](#inspeccionado-redes)
+  - [Creando redes](#creando-redes)
+  - [Agregando Ip estática a contenedor](#agregando-ip-estática-a-contenedor)
+- [6. Docker Machine](#6-docker-machine)
+  - [Overview docker machine](#overview-docker-machine)
+  - [Creando máquina digitalocean](#creando-máquina-digitalocean)
+  - [Accediendo al docker machine](#accediendo-al-docker-machine)
+- [7. Docker Compose](#7-docker-compose)
+  - [Docker compose overview](#docker-compose-overview)
+  - [Servicios](#servicios)
+  - [Variables de entorno](#variables-de-entorno-1)
+  - [Redes](#redes)
+  - [Volúmenes](#volúmenes)
+- [8. Orquestadores](#8-orquestadores)
+  - [Orquestadores teoría](#orquestadores-teoría)
+  - [Nodos](#nodos)
+  - [Swarm](#swarm)
+  - [Servicios](#servicios-1)
+  - [Tareas](#tareas)
+  - [Docker swarm](#docker-swarm)
+  - [Docker swarm deploy servicio](#docker-swarm-deploy-servicio)
+  - [Docker swarm actualizar puertos](#docker-swarm-actualizar-puertos)
+  - [Kubernetes conceptos](#kubernetes-conceptos)
+  - [Kubernetes en local minikube](#kubernetes-en-local-minikube)
+- [9. Extras](#9-extras)
+  - [Compartiendo dispositivos con el contenedor](#compartiendo-dispositivos-con-el-contenedor)
+  - [Docker api](#docker-api)
+  - [Proxy reversivo](#proxy-reversivo)
+- [10. Clases en vivo](#10-clases-en-vivo)
+  - [Clase en Vivo: Primeros pasos en Docker](#clase-en-vivo-primeros-pasos-en-docker)
+  - [Tecnologías Devops](#tecnologías-devops)
 
 # 1. Introduccion 
 
@@ -15,13 +79,13 @@ Docker es una plataforma completa de manejo de contenedores. A lo largo de este 
 ## Conceptos
 
 Imagenes 
---
+---
 
 Contenedores
---
+---
 
 Docker hub
---
+---
 
 - [Docker Hub](https://hub.docker.com/)
 

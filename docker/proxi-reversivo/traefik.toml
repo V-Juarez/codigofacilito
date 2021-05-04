@@ -1,0 +1,12 @@
+############################################
+# API and dashboard configuration
+############################################
+[api]
+############################################
+# Docker configuration backend
+############################################
+[docker]
+endpoint = "unix:///var/run/docker.sock"
+domain = "docker.local"
+watch = true
+

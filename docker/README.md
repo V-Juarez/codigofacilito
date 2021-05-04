@@ -1748,11 +1748,29 @@ Los archivos se cargan en los directorios.
 
 ## Orquestadores teoría
 
+Nodos
+--
 
+Swarm
+--
+
+Servicios
+--
+
+Tareas
+--
 
 ## Docker swarm
 
+Crear maquinas virutales en virtualbox
 
+Instalar [Virtualbox | ArchLinux](https://geekytheory.com/como-instalar-virtualbox-en-arch-linux)
+
+```bash
+docker-machine create -d virtualbox manager1
+docker-machine create -d virtualbox manager3
+docker-machine create -d virtualbox manager2
+```
 
 ## Docker swarm deploy servicio
 
@@ -1772,17 +1790,51 @@ Los archivos se cargan en los directorios.
 
 ## Compartiendo dispositivos con el contenedor
 
+`--divese`
+`moc` reproducir archivos mp4 en consola
 
+```bash
+➜  docker git:(master) ✗ docker run --rm -it -v /home/chronos/Documents/Learning_codigofacilito/docker:/home victorgame/ubuntu bash
+
+apt-get install moc moc-ffmpeg-plugin
+
+# --device
+➜  docker git:(master) ✗ docker run --rm -it -v /home/chronos/Documents/Learning_codigofacilito/docker:/home --device /dev/snd  victorgame/ubuntu bash
+```
+
+Compartir y abrir aplicaciones graficas en un contenedor [jessfraz | dockerfiles](https://github.com/jessfraz/dockerfiles)
 
 ## Docker api
 
+```bash
+docker run -dit -v $PWD:/home/app -v /var/run/docker.sock:/var/run/docker.sock python:3.6
+
+docker exec -it id bash
+```
+
+script [app.py](app.py)
 
 
 ## Proxy reversivo
 
+configure 
+
+- [docker-compose](proxi-reversivo/docker-compose.yml)
+- [traefik.toml](proxi-reversivo/traefik.toml) 
+
+```bash
+docker-compose up -d
+
+# labels
+docker-compose up -d --force-recreate
+```
+
+- [traefiklabs](https://doc.traefik.io/traefik/)
+
 # 10. Clases en vivo
 
 ## Clase en Vivo: Primeros pasos en Docker
+
 
 
 

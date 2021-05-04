@@ -1633,22 +1633,116 @@ docker-machine rm local
 
 ## Docker compose overview
 
+Multiple contenedores
+
+Docker-compose se establece con la extension `.yml`
+
+- [file docker-compose](docker-compose.yml)
+
+Corremos el contenedor:
+
+```bash
+docker-compose up
+
+# Contenedor en segundo plano
+➜  docker git:(master) ✗ docker-compose up -d
+Starting docker_nginx_1 ... done
+➜  docker git:(master) ✗
+➜  docker git:(master) ✗ docker-compose ps
+     Name                   Command               State                Ports
+------------------------------------------------------------------------------------------
+docker_nginx_1   /docker-entrypoint.sh ngin ...   Up      0.0.0.0:80->80/tcp,:::80->80/tcp
+
+# destruir el contenedor
+➜  docker git:(master) ✗ docker-compose down
+Stopping docker_nginx_1 ... done
+Removing docker_nginx_1 ... done
+Removing network docker_default
+➜  docker git:(master) ✗
+
+```
+
+- [Docker-compose](https://docs.docker.com/compose/install/)
 
 
 ## Servicios
 
+```bash
+# Integra mysql al docker-compose.yml
+  docker git:(master) ✗ docker-compose ps
+Name               Command               State                 Ports
+----------------------------------------------------------------------------------
+mysql   docker-entrypoint.sh mysqld      Exit 1
 
+
+# El puert 3306 debe estar libre, de lo contrario tendriamos problemas
+➜  docker git:(master) ✗ docker-compose ps
+Name               Command               State                          Ports
+----------------------------------------------------------------------------------------------------
+mysql   docker-entrypoint.sh mysqld      Up      0.0.0.0:3306->3306/tcp,:::3306->3306/tcp, 33060/tcp
+nginx   /docker-entrypoint.sh ngin ...   Up      0.0.0.0:80->80/tcp,:::80->80/tcp
+➜  docker git:(master) ✗
+
+```
 
 ## Variables de entorno
 
+Crear el archivo .env, donde almacenaremos todo informacion sencible que no queremos subir a un repositorio o la publicar el proyecto
+
+archivo [`.env`](.env)
 
 
 ## Redes
 
+Configurar la red en el docker-compose.yml
 
+```bash
+networks:
+  lorem:
+    driver: bridge
+```
+
+Inspeccionamos la red
+
+```bash
+docker inpsect docker_lorem
+```
+
+Agregar el contenedor a una red existente
+
+```bash
+mysql:
+  networks:
+    - br0
+
+networks:
+  br0: # red existente
+    extenal: true
+
+# Inspeccionamos con
+docker inpsect id
+```
 
 ## Volúmenes
 
+```docker
+    volumes:
+      - ./index.html:/usr/share/nginx/html/index.html
+    
+    volumes:
+      - mysql:/var/lib/mysql
+      -
+volumes:
+  mysql:
+```
+
+Volvemos a ejecutar 
+
+```bash
+docker-compose up -d
+```
+
+Los archivos se cargan en los directorios.
 
 # 8. Orquestadores
 

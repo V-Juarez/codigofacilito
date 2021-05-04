@@ -1836,19 +1836,105 @@ docker-machine create -d virtualbox manager3
 docker-machine create -d virtualbox manager2
 ```
 
+```bash
+docker-machine ls
+
+# Iniciar un contenedor virtual
+docker-machine ssh worker1
+
+# Gnerar un token
+docker swarm init --advertise-addr ip
+
+# Tokens
+docker swarm join --token SWMTKN-1-272rucub4s74wmtdddml9tdjhqfxjt067p6xxg5h07ul16vucg-8704l03q97eactvjdrdsee0ml 192.168.99.100:2376
+
+# node
+docker node ls
+
+# ingrear a docker manager3-3
+➜  docker git:(master) ✗ docker-machine ssh manager3-3
+   ( '>')
+  /) TC (\   Core is distributed with ABSOLUTELY NO WARRANTY.
+ (/-_--_-\)           www.tinycorelinux.net
+
+ # instalar redis
+docker@manager3-3:~$ docker service create --replicas 1 --name redis redis:4
+
+docker@manager3-3:~$ docker service ls
+docker@manager3-3:~$ docker service inspect --pretty redis
+
+# Eliminar un contenedor 
+docker service rm 
+```
+
+- [Redin Skala](http://www.redinskala.com/2019/04/16/comandos-docker/)
+
 ## Docker swarm deploy servicio
+
+```bash
+docker service create --replicas 1 --name nginx nginx1
+```
 
 
 
 ## Docker swarm actualizar puertos
 
+Exponer puertos
+
+```bash
+docker service update --publish-add 80:80 nginx
+
+# servicios de replicas
+docker service update --replicas 3 nginx
+
+# Activar docker-machine
+docker-machine start <nombre>
+```
 
 
 ## Kubernetes conceptos
 
+Kubectl
+--
+
+Master Node
+--
+
+Worker Node
+--
+
+Kubelet
+--
+
+Kubernetes Pod
+--
+
+Deployment
+--
+
 
 
 ## Kubernetes en local minikube
+
+- [Kubernetes | minikube](https://github.com/kubernetes/minikube)
+
+- [Instalar y Configurar kubectl](https://kubernetes.io/es/docs/tasks/tools/install-kubectl/) 
+
+```bash
+minikube start
+
+# cli
+kubectl
+
+# nginx
+kubectl run nginx --image=nginx
+
+# kubectl
+kubectl get pods
+
+kubectl get deployments
+
+```
 
 # 9. Extras
 
@@ -1894,13 +1980,4 @@ docker-compose up -d --force-recreate
 ```
 
 - [traefiklabs](https://doc.traefik.io/traefik/)
-
-# 10. Clases en vivo
-
-## Clase en Vivo: Primeros pasos en Docker
-
-
-
-
-## Tecnologías Devops
 

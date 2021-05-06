@@ -78,25 +78,97 @@
 
 
 
+
 ## Qué es un framework y qué es Flask
 
+Flask es un Framework
 
-
+- [Flask | Documentation](https://flask.palletsprojects.com/en/1.1.x/)
 
 ## Entorno virtual de desarrollo e instalación
 
+Instalar el entorno virtual
 
+```bash
+python3 -m venv ven
+```
 
+Activar entorno virtual
+
+```bash
+source venv./bin/actvate
+```
+
+Desactivar el entorno virtual
+
+```bash
+deactivate
+```
+
+En windows activar el entorno virutal
+
+```bash
+directorio .\env\Script\activate
+```
+
+Instalar flask
+
+```bash
+pip install flask
+```
+
+Listar los paquetes 
+
+```bash
+pip list
+```
 
 ## Primer servidor con Flask
 
+```py
+from flask import Flask
+
+app = Flask(__name__)
 
 
+
+if __name__ == '__main__':
+  app.run()
+```
+
+Correr el servidor
+
+```bash
+python app/app.py
+
+# Detener el servidor
+Ctl + c
+```
 
 ## Primera página web y hola mundo
 
+Crear una ruta de acceso para el servidor:
 
+```py
+"""
+@app.route('/')
+def index():
+  return "CodigoFacilito"
+"""
 
+def index():
+  return "Bienvenidos a CodigoFacilito"
+
+@app.route('/holaMundo')
+def hola_mundo():
+  return "Hola Mundo! Desde codigofacilito"
+```
+
+```py
+if __name__ == '__main__':
+  app.add_url_rule('/',view_func=index)   # Funcion de flask para manterner la direccion principal
+  app.run(debug=True, port=5005)   # Mantener el servidadr activo y actulizandose, cambiar de port
+```
 
 ## Render de templates
 

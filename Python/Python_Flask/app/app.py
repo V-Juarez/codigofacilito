@@ -18,6 +18,14 @@ def index():
   return render_template('index.html', data=data)
   #return "Bienvenidos a CodigoFacilito"
 
+@app.route('/contacto')
+def contacto():
+  data={
+    'titulo':'Contacto',
+    'encabezado':'Bienvenidos(a)'
+  }
+  return render_template('contacto.html', data=data)
+
 @app.route('/holaMundo')
 def hola_mundo():
   return "Hola Mundo! Desde codigofacilito"

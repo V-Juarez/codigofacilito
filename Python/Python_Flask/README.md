@@ -172,23 +172,68 @@ if __name__ == '__main__':
 
 ## Render de templates
 
+Render template 
 
+Se utiliza de esta manera:
+
+```py
+@app.route('/contacto')
+def contacto():
+  data={
+      'titulo':'Contacto',
+          'encabezado':'Bienvenidos(a)'
+            }
+              return render_template('contacto.html', data=data) # render template
+```
 
 
 ## Archivos estáticos
 
+Los archivos estaticos son `.html`, en la carptea  `templates`,  `.css`, en la carpeta `static/css`, `.js`, en la carpeta `static/js`
+por convencion los documentos deben ser guardados en cada carpeta corespondiente.
+
+Puedes utilizar  un archivo normal, pero en esta ocasion y porque jinja, lo permite. Utilizaremos plantillas.
+
+como principal archivo `hmtl` sera `base.html`.
+
+```html
+<!-- utilizamos contenido de nuestra plantilla y es de esta manera como llamamos nuestros archivos css, js y html  -->
+<title>{{ data.titulo }}</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+```
 
 
 
 ## Herencia de plantillas
 
+La herencia de plantilla nos permitira crear y enlazar nuestros archivos `.html`
 
+jinja nos permite utilizarlo de la siguiente manera
+
+```html
+{% extends './base.html' %} # Llamamos al archivo
+
+{% block contenido %}    <!-- sintaxis de jinja, inivio -->
+
+<p>
+  Estmos en la seccion de Contacto   <!--html -->
+  </p>
+
+  {% endblock %}
+  <!-- cierre de jinja -->
+```
 
 
 ## Hipervínculos (links)
 
+Crear `navbar`
 
-
+```html
+<a href="{{ url_for('index') }}">Index</a>
+<a href="{{ url_for('contacto') }}">Contacto</a>
+```
 
 ## Dinamismo en páginas web
 

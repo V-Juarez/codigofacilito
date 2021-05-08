@@ -96,7 +96,7 @@ python3 -m venv ven
 Activar entorno virtual
 
 ```bash
-source venv./bin/actvate
+source venv/bin/actvate
 ```
 
 Desactivar el entorno virtual
@@ -237,46 +237,240 @@ Crear `navbar`
 
 ## Dinamismo en páginas web
 
+Crear parametro y establecerlo. Para personalizarlo
 
+```py
+@app .route('/saludo/<nombre>')
+def saludo(nombre):
+  return 'Hola, {0}'.format(nombre)
+```
 
+Vamos a al navegar in escribimos 
+
+`http://127.0.0.1:5005/saludo/123`
+
+para ver lo dinamico de la pagina, escribiendo `/saludo/` luego en `nombre`.
+
+O si queremos hacer una suma
+
+escribiriamos en el navegar `localhost://suma/14/23` de esta forma `http://127.0.0.1:5005/suma/14/23`
+
+Rutas dinamicas 
+
+```py
+@app.route('/perfil/<nombre>/<int:edad>')
+def perfil(nombre, edad):
+  return 'Tu nombre es: {0} y tu edad es: {1}'.format(nombre, edad)
+```
 
 ## Paso de parámetros mediante URL
 
+```py
+@app.route('/lenguajes')
+def lenguajes():
+  data={
+    'hay_lenguajes': True,
+    'lenguajes':['PHP', 'Python', 'Kotlin', 'Rust', 'Java', 'C#', 'JavaScript']
+  }
+  return render_template('lenguajes.html', data=data)
+```
 
+Estructura de `lenguajes.html` con jinga con la condicion if y for.
 
+```html
+{% extends './base.html' %}
+
+{% block contenido %}
+<ul>
+
+  {% if data.lenguajes|length > 0 %}
+
+  {% for leng in data.lenguajes %}
+  <li>{{  leng  }}</li>
+  {% endfor %}
+
+  {% else %}
+
+  <h2>No hay lenguajes listados...</h2>
+  
+  {% endif %}
+
+</ul>
+
+{% endblock %}
+```
 
 ## Query String
 
+- `GET`
+- `POST`
+- `PUT`
+- `DELETE`
 
-
+```py
+@app.route('/datos')
+def datos():
+  print(request.args)
+  # valor1=request.args.get('valor1')
+  a = request.args.get('valor1')
+  b = int(request.args.get('valor2'))
+  return 'Estos son los datos: {0}, {1}'.format(a, (b+15))
+```
 
 ## Callbacks: Métodos antes y despúes de las peticiones
 
+```py
+# Antes de la peticion
+@app.before_request
+def before_request():
+  print('Antes de la peticion...')
 
+  # Despues de la peticion 
+@app.after_request
+def after_request(response):
+  print('Despues de la peticion...')
+  return response
 
+  #Peticion
+def index():
+  print('Estamos accediendo a la peticion...')
 
+```
 
 # 2. Estructura del proyecto
 
 ## Estructura base del proyecto
 
+Crear nuestra carpeta tienda, con las siguientes carpetas
+
+  - app
+    - templates
+    - static
 
 
 ## Creación de entorno virtual para el proyecto
 
+Instarlar nuestro entorno virtual 
 
+```bash 
+python3 -m venv venv
+
+# Instalar flask
+pip install flask
+
+# Actualizar pip recomendable, el terminal nos sugiere hacerlo  correctamente copiamos el comando.
+
+# Instalar flask-script
+```
+
+Crear nuestro archivo `__init__.py`
+
+```py
+from flask import Flask
+
+app = Flask(__name__)
+
+
+def inicializar_app():
+    return app
+```
+
+Luego crear el archivo `manager.py` script para inicialir el proyecto, fuera del directorio `app`
+
+```py
+from flask_script import Manager
+from app import inicializar_app
+
+app = inicializar_app()
+
+manager = Manager(app)
+
+if __name__ == '__main__':
+    manager.run()
+```
+
+Corremos el servidor con el siguiente comando
+
+```bash
+python manager.py runserver
+```
+
+Creamos nuestra primera vista en `__init__.py`
+
+```py
+@app.route('/')
+def index():
+    return 'Hola mundo!!!'
+```
 
 ## Archivo de configuración del proyecto
 
-
+Crear el archivo `config.creación-de-carpeta-y-estructura-de-plantillas`
 
 ## Manejo de error 404
 
+Crear en el directorio `remplates/errores/404.html`
+- [25 HTML Funny 404 Pages | Free Frontend](https://freefrontend.com/html-funny-404-pages/)
+
+
+Crear el archivo `404.html`
+
+
+importar la ruta en `__init__.py`
+```py
+def pagina_no_encontrada(error):
+    return render_template('errores/404.html'), 404
+
+
+def inicializar_app(config):
+    app.config.from_object(config)
+    app.register_error_handler(404, pagina_no_encontrada)
+```
 
 
 ## Creación de carpeta y estructura de plantillas
 
+Crear nuestra base en el archivo `base.html` que con jinja, vamos a utilizar como plantilla.
 
+Para utilizar jinja `{% %}` para refernciar que se esta utilizando como plantilla.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %} {% endblock %}</title>
+  
+  {% block customCSS %}
+  {% endblock %}
+</head>
+<body>
+  {% block body %}
+
+  {% endblock %}
+
+  {% block customJS%}
+  {% endblock %}
+
+</body>
+</html>
+```
+
+Archivo `body.html`
+
+```html
+{% extends './base.html' %}
+
+{% block body %}
+
+{%  block container %}
+
+{% endblock %}
+
+{% endblock %}
+```
 
 ## Integrando Bootstrap vía CDN
 

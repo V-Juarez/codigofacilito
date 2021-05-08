@@ -7,10 +7,9 @@
   <title>Error 404</title>
 </head>
 <body>
-  <section>
-    <figure>
-      <img src="./404.gif" alt="Error 404" width="400" height="341">
-    </figure>
-  </section>
+  <header>
+    <h1>{{ error }}</h1>
+    <img src="{{ url_for('static', filename='img/404.gif') }}" />
+  </header>
 </body>
 </html>

@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 
 app = Flask(__name__)
 
@@ -6,8 +6,11 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
     # return 'Hola mundo!!! CodigoFacilito'
+@app.route('/login')
+def login():
+    return render_template('auth/login.html')
 
-
+@app.errorhandler(404)
 def pagina_no_encontrada(error):
     return render_template('errores/404.html'), 404
 

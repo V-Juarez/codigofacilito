@@ -2,7 +2,7 @@ from flask_script import Manager, Server
 from app import inicializar_app
 from config import config
 
-configuracion = ['development']
+configuracion = config['development']
 app = inicializar_app(configuracion)
 
 manager = Manager(app)

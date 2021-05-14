@@ -474,26 +474,83 @@ Archivo `body.html`
 
 ## Integrando Bootstrap vía CDN
 
+- [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
 
+Copiar los enlaces `css` y `javascript`
 
 ## Descarga e integración de Bootstrap
 
-
+- [codigofacilito | primera-app-flask](https://github.com/codigofacilito/primera-app-flask)
 
 # 3. Trabajo con formularios
+
 ## Formulario de inicio de sesión
+
+Crear el archivo `login.html` en el directorio template y `login.css` en template/static.
+
+Exportar el `link` utilizando jinja
+
+```html
+  {% block customCSS %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+  {% endblock %}
+```
+
+Imagenes con jinja
+
+```bash
+<header>
+    <h1>{{ error }}</h1>
+    <img src="{{ url_for('static', filename='img/404.gif') }}" />
+  </header>
+```
+
 ## Métodos HTTP aplicables
+
+- `POST`
+- `GET`
+- `DELETE`
+- ``
+
 ## Lectura de valores enviados desde formularios
+
+Al ingresar las credenciales el usuario redirigirlos a index, datos incorrectos mostrarle nuevamente
+`login.html`
+
 ## CSRF (Cross Site Request Forgery)
+
+CSRF Cross-site Request Forgery: Solicitud de falsificacion entre sitios.
+
+```bash
+pip install Flask-WTF
+```
+
 ## Validaciones en formularios HTML
+
+
 # 4. Integracion con bsse de datos
+
+
 ## Creación de BD en MariaDB
+
+
 ## Relaciones foráneas
+
+
 ## Inserción de registros en base de datos
+
+
 ## Configuración de conexión en Flask
+
+
 ## Prueba de conexión hacia BD
+
+
 ## Creación de entidades y modelos
+
+
 # 5. Gestion de sesiones
+
 ## Gestión y encriptado de contraseñas
 ## Inicio de sesión
 ## Trabajo con sesiones

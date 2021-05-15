@@ -222,29 +222,198 @@ func main() {
 # 2. Estucturas de datos
 
 ## Arreglos
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+
+
+	var numeros[6] int 
+
+	numeros[0] = 100
+	numeros[1] = 200
+	numeros[2] = 300
+	numeros[3] = 400
+	numeros[4] = 500
+	numeros[5] = 600
+
+	fmt.Println(numeros)
+}
+```
+
 ## Arreglos pt2
+
+
+
 ## Slice
+
+
+
 ## Sclice pt2
+
+
+
 ## Resumen Slice
+
+```go
+package main 
+
+import "fmt"
+
+func main() {
+
+	numeros := []int {1, 2, 3, 4, 5, 6}
+
+	numeros[0] = 100
+	numeros[5] = 600
+
+	inicio := numeros[0:3]
+	final := numeros[3:6]
+
+	fmt.Println(numeros)
+	fmt.Println(inicio)
+	fmt.Println(final)
+}
+```
+
 ## Función Make
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+
+	slice := make([]int, 3, 3)
+
+	slice[0] = 100
+	slice[1] = 200
+	slice[2] = 300 
+
+	slice = append(slice, 400)
+
+	fmt.Println(slice)
+	fmt.Println(len(slice))
+	fmt.Println(cap(slice))
+}
+```
+
 ## Mapas
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+
+	dias := make(map[int]string)
+
+	dias[0] = "Domingo"
+	dias[1] = "Lunes"
+	dias[2] = "Mates"
+	dias[3] = "Miercoles"
+	dias[4] = "Jueves"
+	dias[5] = "Viernes"
+	dias[6] = "Sabado"
+
+	dias[4] = "JUEVES"
+	// eliminar la llave
+
+	delete(dias, 4)
+	fmt.Println(dias)
+	fmt.Println(dias[4])
+	// fmt.Println(cap(slice))
+}
+```
 ## Iterar sobre mapas
 
+```go
+package main
+
+import "fmt"
+
+func main() {
+
+	usuarios := map[int] string {}
+
+	usuarios[1] = "Usuario 1"
+	usuarios[2] = "Usuario 2"
+	usuarios[3] = "Usuario 3"
+	usuarios[4] = "Usuario 4"
+
+	for id, valor := range usuarios {
+		fmt.Println(id, valor)
+	}
+}
+```
 
 # 3. Controles de flujos
 
 ## Condicionales
+
+```bash
+
+```
 ## Múltiples condiciones
+
+```bash
+
+```
 ## Declaración de variable en condiciones
+
+```bash
+
+```
 ## Switch
+
+```bash
+
+```
 ## Obtener valores de un mapa
+
+```bash
+
+```
 ## Ciclo for
+
+```bash
+
+```
 ## For como While
+
+```bash
+
+```
 ## Foreach
+
+```bash
+
+```
 ## Continue and Break
+
+```bash
+
+```
 ## Función panic
+
+```bash
+
+```
 ## For como Do while
+
+```bash
+
+```
 ## For como ciclo infinito
+
+```bash
+
+```
 
 # 4. Funciones
 

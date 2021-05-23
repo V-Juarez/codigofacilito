@@ -1,0 +1,12 @@
+/* Colores en CSS */
+
+h1 {
+  text-align: center;
+  /* color: rgb(0, 0, 255); */
+  background-color: rgba(0,0,0,0.6);
+  color:white;
+}
+
+body {
+  background-color: rgba(0,0,0,.5);
+}

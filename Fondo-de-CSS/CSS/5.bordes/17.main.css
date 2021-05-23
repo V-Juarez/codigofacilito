@@ -1,0 +1,6 @@
+h1 {
+  background-color: hsla(50,100%,50%,.5);
+  /* border: solid red 10px; */
+  border: dashed rgba(0, 0, 0,.7) 5px;
+  border-radius: 5px;
+}

@@ -269,23 +269,286 @@ a[class="ejemplo1"]{
 # 3. Background
 
 ## Background-Color
+
+``` CSS
+/* CSS */
+.ejemplo {
+  background-color: pink;
+  height: 40px;
+  text-align: center;
+}
+```
+``` HTML
+<!-- HTML -->
+  <h1>Hola desde CodigoFacilito, hey</h1>
+
+  <p class="ejemplo">El curso premiun se encuntra libre</p>
+```
+
+
 ## Background-image and Background-repeat
+
+``` CSS
+/* CSS */
+body {
+  background-image: url('img/bg_12.jpg');
+  background-repeat: no-repeat;
+  background-color: black;
+}
+```
+
 ## Background-Position
+
+``` CSS
+/* CSS */
+body {
+  background-image: url('img/bg_12.jpg');
+  background-repeat: no-repeat;
+  background-color: black;
+  /* background-position: right top; */
+  /* background-position: center top; */
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  /* background-size: 50% 50%; */
+  /* background-size: cover; */
+  background-size: 100px 100px;
+
+}
+.space {
+  height: 600px;
+}
+
+```
+
+
 ## Gradients
+
+css
+
+``` CSS
+/* CSS */
+body {
+  background-image: url('img/bg_12.jpg');
+  background-repeat: no-repeat;
+  background-color: black;
+  /* background-position: right top; */
+  /* background-position: center top; */
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  /* background-size: 50% 50%; */
+  /* background-size: cover; */
+  background-size: 100px 100px;
+  /* gradient */
+  /* background: linear-gradient(to right, gold, yellow, black,violet); */
+
+
+}
+.space {
+  height: 600px;
+}
+```
+
+html
+``` HTML
+<!-- HTML -->
+<body>
+  <h1>Curso de CSS</h1>
+  <div class="space"></div>
+  <div class="space"></div>
+  <div class="space"></div>
+</body>
+```
+
 ## Radial Gradient
+
+html
+
+``` HTML
+<!-- HTML -->
+<body>
+  <h1>Curso de CSS</h1>
+  <div class="space"></div>
+  <div class="space"></div>
+  <div class="space"></div>
+</body>
+```
+
+css
+
+``` CSS
+/* CSS */
+body {
+  background-image: url('img/bg_12.jpg');
+  background-repeat: no-repeat;
+  background-color: black;
+  /* background-position: right top; */
+  /* background-position: center top; */
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  /* background-size: 50% 50%; */
+  /* background-size: cover; */
+  background-size: 100px 100px;
+  /* gradient */
+  /* background: linear-gradient(to right, gold, yellow, black,violet); */
+  /* background: linear-gradient(45deg, gold, yellow, black,violet); */
+  /* background: linear-gradient(-80deg, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1)); */
+  /* background: linear-gradient(-80deg, red 10%, yellow 40%, green 60%); */
+  /* background: radial-gradient(red 5%, yellow 15%, green 60%); */
+  background: repeating-radial-gradient(circle, red, yellow, green);
+}
+
+.space {
+  height: 600px;
+}
+```
 
 # 4. Colores
 
 ## ColorName y Hexadecimal
+
+``` CSS
+
+/* CSS */
+
+h1 {
+  /* Name */
+  /* background-color: cyan; */
+  /* Hexadecimal */
+  background-color: #D2691E;
+  color: gold;
+}
+```
+
 ## RGB y RGBA
+
+``` HTML
+<!-- HTML -->
+<body>
+  <h1>Colores en css rgb y rgba</h1>
+</body>
+```
+
+css 
+
+``` CSS
+/* CSS */
+h1 {
+  text-align: center;
+  /* color: rgb(0, 0, 255); */
+  background-color: rgba(0,0,0,0.6);
+  color:white;
+}
+
+body {
+  background-color: rgba(0,0,0,.5);
+}
+
+```
+
 ## HSL y HSLA
+
+html
+
+``` HTML
+<!-- HTML -->
+<body>
+  <h1>Colores en css: hsl</h1>
+</body>
+```
+css 
+
+``` CSS
+/* CSS */
+h1 {
+  /* hsl */
+  /* background-color: hsl(180,50%,50%) */
+  /* hsla */
+  background-color: hsl(180,50%,50%,.5)
+}
+```
+
 ## Herramientas imprescindibles para la web
+
+- [adove color](https://color.adobe.com/create)
+- [ColorZilla](https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp?hl=es-419Tags)
+- [colors.co](https://coolors.co/f5e6e8-d5c6e0-aaa1c8-967aa1-192a51)
+- [Foter](https://foter.com/)
 
 # 5. Bordes
 
 ## Bordes
+
+html
+
+``` HTML
+<body>
+  <h1>Bordes en CSS</h1>
+</body>
+```
+
+css
+
+``` CSS
+h1 {
+  background-color: hsla(50,100%,50%,.5);
+  /* border: solid red 10px; */
+  border: dashed rgba(0, 0, 0,.7) 5px;
+  border-radius: 5px;
+}
+```
+
+
 ## Border Style y Border color
+
+html
+``` HTML
+<body>
+  <h1>Bordes en CSS</h1>
+</body>
+```
+
+css
+``` CSS
+h1 {
+  background-color: hsla(50,100%,50%,.5);
+  /* border: solid red 10px; */
+  border-top-style:  dashed;
+  border-left-style:  dotted;
+  border-bottom-color: blue;
+
+}
+```
+
+
 ## Border Radius
+
+html
+
+``` HTML
+<body>
+  <h1>Bordes en CSS</h1>
+</body>
+```
+
+css 
+
+``` CSS
+h1 {
+  background-color: hsla(50,100%,50%,.5);
+  /* border: solid red 10px; */
+  border-top-style:  dashed;
+  /* border-left-style:  dotted; */
+  /* border-bottom-color: blue; */
+
+  /* border-bottom: dotted blue 10px; */
+  border: double #000 25px;
+  /* border-radius: 20px; */
+  border-radius: 25px;
+
+
+}
+```
+
 
 # 6. Fuentes
 

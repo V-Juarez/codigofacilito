@@ -1,0 +1,10 @@
+h1 {
+  /* hsl */
+  /* background-color: hsl(180,50%,50%) */
+  /* hsla */
+  background-color: hsl(180,50%,50%,.5)
+}
+
+body {
+  background-image: url('debug.jpg')
+}

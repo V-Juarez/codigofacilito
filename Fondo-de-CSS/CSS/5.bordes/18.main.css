@@ -1,0 +1,8 @@
+h1 {
+  background-color: hsla(50,100%,50%,.5);
+  /* border: solid red 10px; */
+  border-top-style:  dashed;
+  border-left-style:  dotted;
+  border-bottom-color: blue;
+
+}

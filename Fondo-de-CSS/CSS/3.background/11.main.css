@@ -1,0 +1,16 @@
+body {
+  background-image: url('img/bg_12.jpg');
+  background-repeat: no-repeat;
+  background-color: black;
+  /* background-position: right top; */
+  /* background-position: center top; */
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  /* background-size: 50% 50%; */
+  /* background-size: cover; */
+  background-size: 100px 100px;
+
+}
+.space {
+  height: 600px;
+}

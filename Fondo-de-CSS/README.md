@@ -549,27 +549,235 @@ h1 {
 }
 ```
 
-
 # 6. Fuentes
 
 ## Fuentes
+
+- [Googgle Fonts](https://fonts.google.com/specimen/Roboto)
+
+html
+
+``` HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="20.main.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>Bordes en CSS</h1>
+</body>
+</html>
+```
+
+css
+
+``` CSS
+body {
+  font-size: 100%;
+}
+
+h1 {
+  background-color: hsla(50, 100%, 50%, .5);
+  border-top-style: dashed;
+  border: double #000 25px;
+  border-radius: 25px;
+  /* font-family: Arial; */
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-size: 2.5em;  /* 40px / 16 **/
+}
+```
+
+
 ## White Space
+
+html
+
+``` HTML
+<body>
+  <h1>Bordes en CSS</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur facilis excepturi quod velit quia sapiente quos praesentium sit amet? Repellat fugit neque maxime nemo ut soluta voluptatum amet odio totam?
+  
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint adipisci rem voluptatem, quam eum at blanditiis beatae totam nisi optio non corrupti provident repellat illo, nemo deleniti quibusdam perspiciatis porro?
+  </p>
+</body>
+```
+
+css
+
+``` CSS
+body {
+  font-size: 100%;
+}
+
+h1 {
+  background-color: hsla(50, 100%, 50%, .5);
+  border-top-style: dashed;
+  border: double #000 25px;
+  border-radius: 25px;
+  /* font-family: Arial; */
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-size: 2.5em;  /* 40px / 16 **/
+
+}
+
+p {
+  /* white-space: nowrap; */
+  /* white-space: pre; */
+  /* white-space: pre-line; */
+  /* white-space: pre-wrap; */
+  white-space: normal;
+}
+```
+
+
 ## Word Spacing
+
+html
+
+``` HTML
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur facilis excepturi quod velit quia sapiente quos praesentium sit amet? Repellat fugit neque maxime nemo ut soluta voluptatum amet odio totam?
+  
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint adipisci rem voluptatem, quam eum at blanditiis beatae totam nisi optio non corrupti provident repellat illo, nemo deleniti quibusdam perspiciatis porro?
+  </p>
+```
+
+css
+
+``` CSS
+  /* white-space: nowrap; */
+  /* white-space: pre; */
+  /* white-space: pre-line; */
+  /* white-space: pre-wrap; */
+  word-spacing: 4px;
+}
+```
+
+
 ## Text formating
+
+html
+
+``` HTML
+<h1>Bordes en CSS</h1>
+<a href="codigofacilito.com">CodigoFacilito</a>
+```
+
+css
+
+``` CSS
+h21 {
+  text-align: center;
+  text-align: left;
+  text-align: right;
+  }
+
+  a {
+  /* text-decoration: none; */
+  /* text-decoration: overline; */
+  text-decoration: line-through;
+  text-transform: uppercase;
+
+}
+```
+
+
 ## Text Shadow
+
+html
+
+``` HTML
+<!-- HTML -->
+```
+
+css
+
+``` CSS
+text-shadow: 2px 2px 2px black;
+text-shadow: 2px 2px 2px rgba(0,0,0,.4);
+text-shadow: 2px 2px 2px rgba(0,0,0,.7);
+
+```
+
+
 
 # 7. Posiciones
 
 ## Posiciones
+
+
 ## Relative
+
+
+``` CSS
+.girl {
+  position: relative;
+  top: 100px;
+  right: 10px;
+}
+```
+
+``` HTML
+  <img class="girl" src="img/bg_12.jpg" alt="chica con una taza de te">
+```
+
 ## Fixed
+
+html
+```html
+  <h1 class="title">Posiciones en CSS</h1>
+```
+
+css
+```cs
+.title {
+  position: fixed;
+  top: 0;
+  left: 33%;
+  right: 33%;
+}
+```
 ## Absolute
+
+```html
+  <div class="container">
+    <h1 class="title">Posiciones en CSS</h1>
+  </div>
+```
+
+```css
+.title {
+  position: absolute;
+}
+
+.container {
+  position: relative;
+  border: 1px solid red;
+  height: 300px;
+}
+```
 
 # 8. Margin & Padding
 
 ## Padding
+
+
+
 ## Margin
+
+
+
 ## Auto Values
+
+
+
 
 # 9. Imágenes
 

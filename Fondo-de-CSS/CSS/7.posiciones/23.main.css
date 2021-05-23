@@ -1,0 +1,20 @@
+body {
+  font-size: 100%;
+}
+
+h1 {
+  background-color: hsla(50, 100%, 50%, .5);
+  border-top-style: dashed;
+  border: double #000 25px;
+  border-radius: 25px;
+  /* font-family: Arial; */
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-size: 2.5em;  /* 40px / 16 **/
+  text-align: center;
+  color:chocolate;
+  /* text-shadow: 2px 2px 2px black; */
+  text-shadow: 2px 2px 2px rgba(0,0,0,.8);
+
+}
+

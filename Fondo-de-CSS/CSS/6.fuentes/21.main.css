@@ -1,0 +1,27 @@
+body {
+  font-size: 100%;
+}
+
+h1 {
+  background-color: hsla(50, 100%, 50%, .5);
+  border-top-style: dashed;
+  border: double #000 25px;
+  border-radius: 25px;
+  /* font-family: Arial; */
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-size: 2.5em;  /* 40px / 16 **/
+  /* Text formating */
+  text-align: center;
+  text-align: left;
+  text-align: right;
+
+}
+
+a {
+  /* text-decoration: none; */
+  /* text-decoration: overline; */
+  text-decoration: line-through;
+  text-transform: uppercase;
+
+}

@@ -1,0 +1,15 @@
+h1, p {
+  color: green;
+  text-align: center;
+}
+
+.ejemplo {
+  background-color: pink;
+  height: 40px;
+  text-align: center;
+}
+
+span h2, p {
+  color: red;
+  font-size: 30px;
+}

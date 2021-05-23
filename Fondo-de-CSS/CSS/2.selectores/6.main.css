@@ -1,0 +1,57 @@
+h1, p {
+  color: green;
+  text-align: center;
+}
+
+.ejemplo {
+  background-color: pink;
+  height: 40px;
+  text-align: center;
+}
+
+/* selector clase */
+h2.ejemplo1 {
+  color: green;
+  height: 40px;
+}
+
+/* span h2, p {
+  color: red;
+  font-size: 30px;
+} */
+
+/* Selector id */
+
+/* hijos */
+#colores > p {
+  background-color: pink;
+  color: violet;
+  font-size: 2em
+}
+
+/* nietos */
+/* #colores > ul > li {
+  background-color: pink;
+  color: violet;
+  font-size: 2em
+} */
+
+#orange {
+  color: yellow !important;
+}
+
+#green {
+  color: black;
+}
+
+#red {
+  color: gold;
+}
+
+a[href="animefenix.com"] {
+  color: gold;
+}
+
+a[class="ejemplo1"]{
+  color: violet;
+}

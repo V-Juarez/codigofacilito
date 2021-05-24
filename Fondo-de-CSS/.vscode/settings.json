@@ -1,7 +1,7 @@
 {
-  "editor.renderLineHighlight": "gutter",
   "editor.formatOnType": true,
   "editor.inlineHints.fontFamily": "Victor Mono",
   "editor.padding.bottom": 1,
-  "editor.wordWrap": "on"
+  "editor.wordWrap": "on",
+  "editor.padding.top": 1
 }

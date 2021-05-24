@@ -1026,23 +1026,82 @@ css
 
 html 
 ``` HTML
-  <img class="golang" src="img/golang.png" alt="chica con una taza de te">
-  <img class="cody" src="img/cody.png" alt="chica con una taza de te"><!-- HTML -->
+  <p class="imgtext">Para: </p>
 ```
 
 css
 ``` CSS
-/* CSS */
+.imgtext {
+  position: absolute;
+  top: 8px;
+  left: 30px;
+  font-size: 18px;
+}
 ```
 
 
 
 # 10. Animaciones
 
-## Transforms
-## Transiciones
-## Animation
-## Animation pt.2
+## Transfor
+
+html
+```html
+  <div class="polaroid">
+    <img class="golang thumb" src="img/golang.png" alt="chica con una taza de te" width="300">
+  <div class="texto">
+    <p>Golang</p>
+  </div>
+```
+
+css
+```css
+div.polaroid:hover {
+  /* transform: translate(50px, 100px); */
+  /* transform: rotate(50deg); */
+  /* transform: scale(2,2); */
+  /* transform: scaleY(2); */
+  /* transform: scaleX(2); */
+  transform: skew(20deg);
+}
+```
+
+## Transicion
+
+html
+```html
+
+```
+
+css
+```css
+
+```
+
+## Animati
+
+html
+```html
+
+```
+
+css
+```css
+
+```
+
+## Animation pt
+
+html
+```html
+
+```
+
+css
+```css
+
+```
+
 
 # 11. Extras
 

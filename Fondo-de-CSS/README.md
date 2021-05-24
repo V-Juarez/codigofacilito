@@ -768,14 +768,59 @@ css
 
 ## Padding
 
+html
+``` HTML
+  <div class="container">
+    <h1 class="title">Posiciones en CSS</h1>
+    <img class="girl" src="img/bg_12.jpg" alt="chica con una taza de te">
+  </div>
+```
 
+css
+``` CSS
+.container {
+  position: relative;
+  border: 1px solid red;
+  height: 300px;
+  /* padding: 10px 5px 10px 5px; */
+  /* padding: 10px; */
+  /* padding-top: 10px; */
+  padding-top: 10%;
+}
+```
 
 ## Margin
 
+html
+``` HTML
+  <div class="container">
+    <h1 class="title">Posiciones en CSS</h1>
+    <img class="girl" src="img/bg_12.jpg" alt="chica con una taza de te">
+  </div>
+```
+
+css
+``` CSS
+.girl {
+  position: relative;
+  top: 100px;
+  right: 10px;
+  margin: 100px;
+}
+```
 
 
 ## Auto Values
 
+html
+``` HTML
+<!-- HTML -->
+```
+
+css
+``` CSS
+/* CSS */
+```
 
 
 

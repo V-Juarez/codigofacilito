@@ -1,0 +1,39 @@
+body {
+  font-size: 100%;
+  margin: 0;
+}
+
+h1 {
+  background-color: hsla(50, 100%, 50%, .5);
+  border-top-style: dashed;
+  border: double #000 25px;
+  border-radius: 25px;
+  /* font-family: Arial; */
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-size: 2.5em;  /* 40px / 16 **/
+  text-align: center;
+  color:chocolate;
+  /* text-shadow: 2px 2px 2px black; */
+  text-shadow: 2px 2px 2px rgba(0,0,0,.8);
+}
+
+.girl {
+  position: relative;
+  top: 100px;
+  right: 10px;
+}
+
+.title {
+  position: absolute;
+}
+
+.container {
+  position: relative;
+  border: 1px solid red;
+  height: 300px;
+  /* padding: 10px 5px 10px 5px; */
+  /* padding: 10px; */
+  /* padding-top: 10px; */
+  /* padding-top: 10%; */
+}

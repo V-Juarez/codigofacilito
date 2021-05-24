@@ -953,7 +953,6 @@ html
     <div class="texto">
       <p>Golang</p>
     </div>
-
 ```
 
 css
@@ -979,13 +978,46 @@ div.polaroid {
 
 html 
 ``` HTML
-  <img class="golang" src="img/golang.png" alt="chica con una taza de te">
-  <img class="cody" src="img/cody.png" alt="chica con una taza de te"><!-- HTML -->
+<div class="polaroid">
+    <img class="girl thumb" src="img/bg_12.jpg" alt="chica con una taza de te" width="300">
+    <div class="texto">
+      <p>Chica con una taza de te</p>
+    </div>
+  </div>
+
+  <div class="polaroid">
+    <img class="cody thumb" src="img/cody.png" alt="chica con una taza de te" width="300">
+    <div class="texto">
+      <p>Cody</p>
+    </div>
+  </div>
+
+  <div class="polaroid">
+    <img class="golang thumb" src="img/golang.png" alt="chica con una taza de te" width="300">
+    <div class="texto">
+      <p>Golang</p>
+    </div>
+
 ```
 
 css
 ``` CSS
-/* CSS */
+
+.polaroid img:hover {
+  /* opacity: 1; */
+  /* filter: blur(0); */
+  /* filter: brightness(1); */
+  /* filter: contrast(1); */
+  /* filter: grayscale(.2); */
+  /* filter: hue-rotate(360deg); */
+  /* filter: invert(1); */
+  /* filter: saturate(1); */
+  filter: sepia(3);
+}
+
+.texto {
+  text-align: center;
+}
 ```
 
 

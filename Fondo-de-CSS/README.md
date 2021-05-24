@@ -814,7 +814,173 @@ css
 
 html
 ``` HTML
-<!-- HTML -->
+ <div class="container">
+    <h1 class="title">Posiciones en CSS</h1>
+    <img class="girl" src="img/bg_12.jpg" alt="chica con una taza de te">
+  </div>
+```
+
+css
+``` CSS
+.title {
+  /* width: 300px; */
+  width: 50%;
+  position: auto;
+}
+```
+
+
+
+# 9. Imágenes
+
+## Imágenes con bordes redondeados
+
+
+html 
+``` HTML
+  <img class="golang" src="img/golang.png" alt="chica con una taza de te">
+  <img class="cody" src="img/cody.png" alt="chica con una taza de te"><!-- HTML -->
+```
+
+css
+``` CSS
+.cody {
+  position: relative;
+  margin: 10;
+  border-radius: 50px;
+}
+
+.golang {
+  border: double 10px red;
+  margin: 10;
+  border-radius: 50%;
+}
+```
+
+
+## Thumbnails
+
+
+html 
+``` HTML
+  <img class="golang thumb" src="img/golang.png" alt="chica con una taza de te">
+  <img class="cody thumb" src="img/cody.png" alt="chica con una taza de te">
+```
+
+css
+``` CSS
+.cody {
+  position: relative;
+  border-radius: 50px;
+}
+
+.golang {
+  border: double 10px red;
+  border-radius: 50%;
+}
+
+.thumb {
+  margin: 10px;
+  border: 1px solid gray;
+  width: 150px;
+}
+
+.thumb:hover {
+  box-shadow: 0 0 2px 1px rgba(0,140,186,.5);
+  width: 200px;
+}
+```
+
+
+## Imágenes responsivas
+
+
+html 
+``` HTML
+<div class="responsibe">
+    <img class="girl thumb" src="img/bg_12.jpg" alt="chica con una taza de te">
+    <img class="golang thumb" src="img/golang.png" alt="chica con una taza de te">
+    <img class="cody thumb" src="img/cody.png" alt="chica con una taza de te">
+</div>
+```
+
+css
+``` CSS
+.girl {
+  border: double 10px red;
+  border-radius: 50%;
+}
+
+.cody {
+  position: relative;
+  border-radius: 50px;
+}
+
+.golang {
+  border: double 10px red;
+  border-radius: 50%;
+}
+
+.responsive {
+  height: auto;
+  max-width: 100%;
+}
+
+```
+
+
+## Efecto Polaroid
+
+
+html 
+``` HTML
+<div class="polaroid">
+    <img class="girl thumb" src="img/bg_12.jpg" alt="chica con una taza de te" width="300">
+    <div class="texto">
+      <p>Chica con una taza de te</p>
+    </div>
+  </div>
+
+  <div class="polaroid">
+    <img class="cody thumb" src="img/cody.png" alt="chica con una taza de te" width="300">
+    <div class="texto">
+      <p>Cody</p>
+    </div>
+  </div>
+
+  <div class="polaroid">
+    <img class="golang thumb" src="img/golang.png" alt="chica con una taza de te" width="300">
+    <div class="texto">
+      <p>Golang</p>
+    </div>
+
+```
+
+css
+``` CSS
+div.polaroid {
+  background-color: white;
+  width: 300px;
+  padding: 20px;
+  margin: auto;
+  margin-bottom: 25px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+  display: block;
+}
+
+.texto {
+  text-align: center;
+}
+```
+
+
+## Filtros
+
+
+html 
+``` HTML
+  <img class="golang" src="img/golang.png" alt="chica con una taza de te">
+  <img class="cody" src="img/cody.png" alt="chica con una taza de te"><!-- HTML -->
 ```
 
 css
@@ -823,15 +989,21 @@ css
 ```
 
 
-
-# 9. Imágenes
-
-## Imágenes con bordes redondeados
-## Thumbnails
-## Imágenes responsivas
-## Efecto Polaroid
-## Filtros
 ## Agregar texto a imágenes
+
+
+html 
+``` HTML
+  <img class="golang" src="img/golang.png" alt="chica con una taza de te">
+  <img class="cody" src="img/cody.png" alt="chica con una taza de te"><!-- HTML -->
+```
+
+css
+``` CSS
+/* CSS */
+```
+
+
 
 # 10. Animaciones
 

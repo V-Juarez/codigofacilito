@@ -18,11 +18,35 @@ h1 {
 }
 
 .girl {
-  position: relative;
-  top: 100px;
-  right: 10px;
-  margin: 100px;
+  border: double 10px red;
+  border-radius: 50%;
 }
+
+.cody {
+  position: relative;
+  border-radius: 50px;
+}
+
+.golang {
+  border: double 10px red;
+  border-radius: 50%;
+}
+
+.responsive {
+  height: auto;
+  max-width: 100%;
+}
+
+/* .thumb {
+  margin: 10px;
+  border: 1px solid gray;
+  width: 150px;
+}
+
+.thumb:hover {
+  box-shadow: 0 0 2px 1px rgba(0,140,186,.5);
+  width: 200px;
+} */
 
 .title {
   /* width: 300px; */

@@ -1,0 +1,182 @@
+body {
+  font-size: 100%;
+  margin: 0;
+  background-color: #eee;
+}
+
+h1 {
+  background-color: hsla(50, 100%, 50%, .5);
+  border-top-style: dashed;
+  border: double #000 25px;
+  border-radius: 25px;
+  /* font-family: Arial; */
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-size: 2.5em;  /* 40px / 16 **/
+  text-align: center;
+  color:chocolate;
+  /* text-shadow: 2px 2px 2px black; */
+  text-shadow: 2px 2px 2px rgba(0,0,0,.8);
+}
+
+
+div.polaroid {
+  position: relative;
+  background-color: white;
+  width: 300px;
+  padding: 20px;
+  margin: auto;
+  margin-bottom: 25px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+  display: block;
+  transition: width 2s,transform .3s;
+  transition-delay: .3s;
+  animation: roll 4% infinite alternate;
+  /* transition: width 2s, transform .3s;
+  transition-delay: .3s;
+  animation-name: skew 4s infinite alternate; */
+  /* animation-name: skew;
+  animation-duration: 3;
+  animation-iteration-count: infinite;
+  /* animation-direction: alternate; */
+  /* animation-direction: alternate-reverse; */
+  /* animation-delay: 1s; */
+  /* animation-timing-function: linear; */
+  /* animation-timing-function: ease; */ 
+}
+
+.polaroid img {
+
+  filter: sepia(.2);
+  transition: width 2%, height 2s, trasnform 2s;
+  transition-timing-function: linear;
+
+}
+
+.polaroid img:hover {
+  filter: sepia(3);
+  /* cursor: wait; */
+  /* cursor: no-drop; */
+  /* cursor: text; */
+  /* cursor: pointer; */
+  /* cursor: help; */
+  /* cursor: move; */
+  /* cursor: progress; */
+  /* cursor: crosshair; */
+  /* cursor: e-resize; */
+  /* cursor: n-resize; */
+  /* cursor: ne-resize; */
+  /* cursor: nw-resize; */
+  /* cursor: se-resize; */
+  /* cursor: sw-resize; */
+  cursor: w-resize;
+}
+
+div.polaroid:hover {
+  width: 400px;
+  height: 400px;
+  transition: rotate(180deg);
+}
+
+.cubo {
+  width: 100px;
+  height: 100px;
+  background-color: gold;
+  transition: width 2s, height 2s, transform 2s;
+  transition-timing-function: ease-in-out;
+}
+
+div.cubo:hover {
+  width: 300px;
+  height: 300px;
+  transform: rotate(180deg);
+  animation-name: ejemplo;
+  animation-duration: 4s;
+  animation-delay: 2s;
+}
+
+@keyframes ejemplo {
+  /* from{background-color: red}` */
+  /* to{background-color: green} */
+  0%{background-color: black}
+  25%{background-color: violet}
+  50%{background-color: green}
+  100%{background-color: pink}
+}
+
+@keyframes skew {
+  0%{transform: skkewX(20deg);}
+  100%{transform: skkewY(-20deg);}
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(36deg)
+  }
+}
+
+.texto {
+  text-align: center;
+}
+
+.imgtext {
+  position: absolute;
+  top: 8px;
+  left: 30px;
+  font-size: 18px;
+}
+
+/* .responsive {
+  height: auto;
+  max-width: 100%;
+} */
+
+/* .thumb {
+  margin: 10px;
+  border: 1px solid gray;
+  width: 150px;
+}
+
+.thumb:hover {
+  box-shadow: 0 0 2px 1px rgba(0,140,186,.5);
+  width: 200px;
+} */
+
+.title {
+  /* width: 300px; */
+  width: 50%;
+  position: auto;
+}
+
+.container {
+  position: relative;
+  border: 1px solid red;
+  height: 300px;
+  /* padding: 10px 5px 10px 5px; */
+  /* padding: 10px; */
+  /* padding-top: 10px; */
+  padding-top: 10%;
+}
+
+@media screen and (max-width: 480px) { 
+  /* iphone 4 */
+  body {
+    background-color: red;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 760px) {
+  /* tabletas  */
+  body {
+    background-color: green;
+  }
+}
+
+@media screen and (min-width: 761px) {
+  body {
+    background-color: goldenrod;
+  }
+}

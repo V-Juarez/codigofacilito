@@ -51,10 +51,10 @@
   - [Filtros](#filtros)
   - [Agregar texto a imágenes](#agregar-texto-a-imágenes)
 - [10. Animaciones](#10-animaciones)
-  - [Transforms](#transforms)
-  - [Transiciones](#transiciones)
+  - [Transfor](#transfor)
+  - [Transicion](#transicion)
   - [Animation](#animation)
-  - [Animation pt.2](#animation-pt2)
+  - [Animation pt](#animation-pt)
 - [11. Extras](#11-extras)
   - [Pointer events](#pointer-events)
   - [Media Queries](#media-queries)
@@ -1071,23 +1071,80 @@ div.polaroid:hover {
 html
 ```html
 
+  <div class="polaroid">
+    <img class="girl thumb" src="img/bg_12.jpg" alt="chica con una taza de te" width="300">
+    <p class="imgtext">Para: </p>
+    <div class="texto">
+      <p>Chica con una taza de te</p>
+    </div>
+  </div>
+
+  <!-- cubo -->
+<div class="cubo"></div>
+
+  
 ```
 
 css
 ```css
+.polaroid img {
+  filter: sepia(.2);
+  transition: width 2%, height 2s, trasnform 2s;
+  transition-timing-function: linear;
+  /* transition-timing-function: ease-in; */
+  /* transition-timing-function: ease-in; */
+  /* transition-timing-function: ease-auto; */
+  /* transition-timing-function: ease-in-auto; */
+  /* transition-timing-function: ease; */
+}
 
+div.polaroid:hover {
+  width: 400px;
+  height: 400px;
+  transition: rotate(180deg);
+}
+
+/* cubo */
+.cubo {
+  width: 100px;
+  height: 100px;
+  background-color: gold;
+  transition: width 2s, height 2s, transform 2s;
+  transition-timing-function: ease-in-out;
+}
+
+div.cubo:hover {
+  width: 300px;
+  height: 300px;
+  transform: rotate(180deg)
+}
 ```
 
-## Animati
+## Animation
 
 html
 ```html
-
+<div class="cubo"></div>
 ```
 
 css
 ```css
+.cubo {
+  width: 100px;
+  height: 100px;
+  background-color: gold;
+  transition: width 2s, height 2s, transform 2s;
+  transition-timing-function: ease-in-out;
+}
 
+@keyframes ejemplo {
+  /* from{background-color: red}` */
+  /* to{background-color: green} */
+  0%{background-color: black}
+  25%{background-color: violet}
+  50%{background-color: green}
+  100%{background-color: pink}
+}
 ```
 
 ## Animation pt
@@ -1100,18 +1157,192 @@ html
 css
 ```css
 
+div.polaroid {
+  position: relative;
+  background-color: white;
+  width: 300px;
+  padding: 20px;
+  margin: auto;
+  margin-bottom: 25px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+  display: block;
+  transition: width 2s, transform .3s;
+  transition-delay: .3s;
+  animation-name: skew 4s infinite alternate;
+  /* animation-name: skew;
+  animation-duration: 3;
+  animation-iteration-count: infinite;
+  /* animation-direction: alternate; */
+  /* animation-direction: alternate-reverse; */
+  /* animation-delay: 1s; */
+  /* animation-timing-function: linear; */
+  /* animation-timing-function: ease; */ 
+}
+
+@keyframes skew {
+  0%{transform: skkewX(20deg);}
+  100%{transform: skkewY(-20deg);}
+}
 ```
 
 
 # 11. Extras
 
 ## Pointer events
+
+html
+``` HTML
+<!-- HTML -->
+```
+
+css
+``` CSS
+.polaroid img:hover {
+  filter: sepia(3);
+  /* cursor: wait; */
+  /* cursor: no-drop; */
+  /* cursor: text; */
+  /* cursor: pointer; */
+  /* cursor: help; */
+  /* cursor: move; */
+  /* cursor: progress; */
+  /* cursor: crosshair; */
+  /* cursor: e-resize; */
+  /* cursor: n-resize; */
+  /* cursor: ne-resize; */
+  /* cursor: nw-resize; */
+  /* cursor: se-resize; */
+  /* cursor: sw-resize; */
+  cursor: w-resize;
+}
+```
+
+
 ## Media Queries
+
+html
+``` HTML
+  <meta name="viewport" content="width-device-width, initial-scale=1.0">
+```
+
+css
+``` CSS
+@media screen and (max-width: 480px) { 
+  /* iphone 4 */
+  body {
+    background-color: red;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 760px) {
+  /* tabletas  */
+  body {
+    background-color: green;
+  }
+}
+
+@media screen and (min-width: 761px) {
+  body {
+    background-color: goldenrod;
+  }
+}
+```
+
+
 ## Media Queries pt.2
+
+html
+``` HTML
+  <meta name="viewport" content="width-device-width, initial-scale=1.0">
+
+```
+
+css
+``` CSS
+@media screen and (max-width: 480px) { 
+  /* iphone 4 */
+  body {
+    background-color: red;
+  }
+  /* .gopher {
+    display: none;
+  } */
+}
+.cubo {
+  display: none;
+}
+
+@media screen and (min-width: 481px) and (max-width: 760px) {
+  /* tabletas  */
+  body {
+    background-color: green;
+  }
+}
+
+@media screen and (min-width: 761px) {
+  body {
+    background-color: goldenrod;
+  }
+  div.polaroid {
+    display: inline-block;
+    margin-left: 10%;
+  }
+}
+```
+
+
 ## Pseudo-Clases pt1
+
+html
+``` HTML
+<!-- HTML -->
+```
+
+css
+``` CSS
+/* CSS */
+```
+
+
 ## Pseudo-Clases pt2
+
+html
+``` HTML
+<!-- HTML -->
+```
+
+css
+``` CSS
+/* CSS */
+```
+
+
 ## Pseudo elementos
+
+html
+``` HTML
+<!-- HTML -->
+```
+
+css
+``` CSS
+/* CSS */
+```
+
+
 ## Ejemplos de Frameworks CSS
+
+html
+``` HTML
+<!-- HTML -->
+```
+
+css
+``` CSS
+/* CSS */
+```
+
+
 
 # 12. Ejercicios
 

@@ -1295,12 +1295,27 @@ css
 
 html
 ``` HTML
-<!-- HTML -->
+<a href="#">CF.com</a>
 ```
 
 css
 ``` CSS
-/* CSS */
+/* pseudo clase */
+a:link {
+  color: green
+}
+
+a:visited {
+  font-size: 3em;
+  color: red;
+}
+a:active {
+  color: violet;
+}
+
+a:hover {
+  background-color: black;
+}
 ```
 
 
@@ -1308,12 +1323,39 @@ css
 
 html
 ``` HTML
-<!-- HTML -->
+    <p class="imgtext">Para: </p>
 ```
 
 css
 ``` CSS
-/* CSS */
+
+/* p:nth-child(2){
+  background-color: greenyellow;;
+} */
+/* p:nth-last-child(2) {
+  background-color: greenyellow;
+} */
+
+/* p:first-of-type {
+  background-color: greenyellow;
+} */
+
+/* p:last-of-type {
+  background-color: greenyellow;
+} */
+/* p:nth-of-type(2) {
+  background-color: greenyellow;
+} */
+p:nth-last-of-type(2) {
+  background-color: greenyellow;
+}
+/* p:only-of-type{}
+p:last-child{}
+p:only-child{}
+p:root{}
+p:enabled{}
+p:disabled{}
+p:checked{} */
 ```
 
 
@@ -1321,16 +1363,42 @@ css
 
 html
 ``` HTML
-<!-- HTML -->
+<p class="parrafo"  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab numquam nihil iusto, ut debitis magnam exercitationem sit inventore, fugit minus maxime dolor iste tenetur. Facilis exercitationem obcaecati voluptas esse natus?</p>
 ```
 
 css
 ``` CSS
-/* CSS */
+.parrafo::first-line {
+  color:green;
+  font-size: 2em;
+}
+.parrafo::first-letter {
+  color: green;
+  font-size: 2em;
+}
+/* .parrafo::before {
+  content: url("");
+  color: green;
+  font-size: 2em;
+}
+.parrafo::before {
+  content: url("");
+  color: green;
+  font-size: 2em;
+} */
+.parrafo::selection {
+  color: green;
+  background-color: red;
+}
 ```
 
 
 ## Ejemplos de Frameworks CSS
+
+- [Flexbox Grid](http://flexboxgrid.com/)
+- [Bootstrap](https://getbootstrap.com/)
+- [materializecss](https://materializecss.com/)
+- [Material Desig Lite](https://getmdl.io/)
 
 html
 ``` HTML

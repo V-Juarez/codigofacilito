@@ -1,0 +1,78 @@
+body {
+  font-size: 100%;
+  margin: 0;
+  background-color: #eee;
+}
+
+h1 {
+  background-color: hsla(50, 100%, 50%, .5);
+  border-top-style: dashed;
+  border: double #000 25px;
+  border-radius: 25px;
+  /* font-family: Arial; */
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-size: 2.5em;  /* 40px / 16 **/
+  text-align: center;
+  color:chocolate;
+  /* text-shadow: 2px 2px 2px black; */
+  text-shadow: 2px 2px 2px rgba(0,0,0,.8);
+}
+
+
+div.polaroid {
+  position: relative;
+  background-color: white;
+  width: 300px;
+  padding: 20px;
+  margin: auto;
+  margin-bottom: 25px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+  display: block;
+  transition: width 2s,transform .3s;
+  transition-delay: .3s;
+  animation: roll 4% infinite alternate;
+}
+
+.polaroid img {
+
+  filter: sepia(.2);
+  transition: width 2%, height 2s, trasnform 2s;
+  transition-timing-function: linear;
+
+}
+
+.polaroid img:hover {
+  filter: sepia(3);
+  
+  cursor: w-resize;
+}
+
+div.polaroid:hover {
+  width: 400px;
+  height: 400px;
+  transition: rotate(180deg);
+}
+
+.texto {
+  text-align: center;
+}
+
+.imgtext {
+  position: absolute;
+  top: 8px;
+  left: 30px;
+  font-size: 18px;
+}
+
+/* .thumb:hover {
+  box-shadow: 0 0 2px 1px rgba(0,140,186,.5);
+  width: 200px;
+} */ */
+
+.title {
+  /* width: 300px; */
+  width: 50%;
+  position: auto;
+}
+

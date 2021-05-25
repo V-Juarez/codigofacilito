@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+}
+
+div.polaroid {
+  background-color: white;
+  width: 300px;
+  padding: 20px;
+  margin: 5px 0 25px 0;
+  /* margin: auto; */
+  margin-bottom: 25px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, .2);
+  height: 250px;
+  overflow: hidden;
+
+  /* display: block; */
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.texto {
+  position: absolute; 
+  top: 200px;
+  text-align: center;
+  background-color: white;
+  width: 100%;
+}
+
+/* @medias */
+@media screen and (max-width: 480px) {
+  /* mvil */
+ 
+}
+
+@media screen and (min-width: 481px) and (max-width: 760px) {
+
+  
+}
+
+@media screen and (min-width: 761px) {
+  /*  */
+  div.polaroid {
+    display: inline-block;
+    margin-left: 6%;
+  }
+  img {
+    width: 300px;
+  }
+}

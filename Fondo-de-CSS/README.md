@@ -1419,6 +1419,20 @@ css
 ## Imágenes modal pt1
 ## Imágenes modal pt2
 ## NavBar CSS pt1
+
+Con una nueva version de Font Awesome tienes que hacer lo siguente:
+1)abrir la pagina
+https://fontawesome.com/
+2) hacer el clic a boton
+Start for Free   (estaras en esta pagina https://fontawesome.com/start)
+3)en mitad de esta pagina hacer el clic a boton
+Download Serve Font Awesome yourself (estaras aqui https://fontawesome.com/how-to-use/on-the-web/setup/hosting-font-awesome-yourself)
+4) hacer el clic a boton  
+Download Font Awesome Free For the Web
+5) Abrir tu ZIP fontawesome-free-5.13.0-web, poner todas las carpetas en carpeta con tu proyecto (cambia el nombre de carpeta a font-awesome)
+6) escribir adentro de tu <head> <link rel="stylesheet" href="/font-awesome/css/all.css">
+7) copiar el code de cualquer icono de pagina https://fontawesome.com/icons
+8) 
 ## NavBar CSS Agregando estilos pt2
 ## NavBar CSS Funcionalidad pt3
 

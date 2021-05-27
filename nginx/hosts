@@ -1,0 +1,6 @@
+# Static table lookup for hostnames.
+# See hosts(5) for details.
+192.168.1.108 app.test
+192.168.1.108 apache.app.test
+192.168.1.108 nginx.app.test
+192.168.1.108 whoami.app.test

@@ -82,11 +82,12 @@ cd /ect/nginx/
 
 - [Module nginx](https://nginx.org/en/docs/http/ngx_http_core_module.html)
 
-## Default server
 
 ``` BASH
 # obtener ip
 ifconfig
+# o 
+nmcli device show
 
 # Editar archivo en
 cd /etc/hosts
@@ -108,18 +109,32 @@ cd /etc/nginx/conf.f
 # editar el archivo deaful.conf
 : localhost => : app.test
 # luego ir al navegador, escribir en la barara de nvegacion app.test
+
+
+# Verificar que la configuracion y sitaxis este correcto con 
+sudo nginx -t
+
+# recargar nginx
+sudo  nginx -s reload
 ```
 
+## Default server
 
+```bash
+default_server
+```
 
 
 ## Página de errores
 
-
+```bash
+error_page 404 = /404.html;
+```
 
 ## Location
 
-
+```html
+a
 
 # 3. Nginx como reverse proxy
 

@@ -1,0 +1,25 @@
+.container: {
+  display: grid;
+  height: 300px;
+  width: 500px;
+  background-color: blue;
+  grid-template: 200px 100px / [inicio-col] 200px 300px [final-col];
+/*  grid-template-rows: 100px 200px; */
+/*  grid-template: 300px / 200px 300px;  hans-property*/
+}
+
+.red {
+  background-color: red;
+  /* grid-column: 1 / 3; */
+  grid-column: inicio-col / final-col;
+  grid-row: 1;
+/*  grid-column-start: 1;
+  grid-row-start: 1; */
+/*  grid-column-end: 1;
+  grid-column-start: 1; */
+}
+
+.yellow {
+  background-color: yellow;
+  grid-column: 1 /3;
+}

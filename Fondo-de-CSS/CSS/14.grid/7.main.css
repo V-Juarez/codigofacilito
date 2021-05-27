@@ -1,0 +1,33 @@
+.container {
+  display: grid;
+  height: 300px;
+  width: 500px;
+  background-color: blue;
+/*  grid-template-columns: 1fr 1fr; */
+  grid-template-columns: repeat(6,1fr);
+  grid-template-rows: repeat(3,1fr);
+/*  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 200px 1fr 2fr; */
+  /* grid-template: 8.66%; */
+/*  grid-template: repeat(12, 8.66%); */
+  grid-template-areas: "nav nav nav nav nav nav"
+                        "body body body body body body"
+     "alt alt "                   "footer footer footer footer footer footer";
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.red {
+  background-color: red;
+/*  grid-area: 2/ 4 / 3 / 4; */
+  grid-area: footer;
+}
+
+.yellow {
+  background-color: yellow;
+/*  grid-column: 2 /3; */
+  grid-area: nav;
+  height: 30px;
+  width: 500px;
+}

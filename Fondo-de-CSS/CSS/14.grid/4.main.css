@@ -1,0 +1,19 @@
+.container: {
+  display: grid;
+  height: 300px;
+  width: 500px;
+  background-color: blue;
+  /* grid-template: 8.66%; */
+  grid-template: repeat(12, 8.66%);
+}
+
+.red {
+  background-color: red;
+  grid-column: inicio-col / final-col;
+  grid-row: 1;
+}
+
+.yellow {
+  background-color: yellow;
+  grid-column: 1 /3;
+}

@@ -1451,16 +1451,103 @@ Download Font Awesome Free For the Web
 # 14. CSS Grid
 
 ## Qué es el CSS Grid
+
+La creación de esquemas y estructuras de posicionamiento para elementos en una página web, ha sido un desafío constante para desarrolladores de todas épocas. Desde los primeros pasos de CSS, se observó la necesidad de introducir un módulo de grilla para poder crear esquemas como los que veíamos en las revistas.
+
+Sin embargo, no fue hasta 2012 cuando en Microsoft, por primera vez se implementó un módulo como el que hoy tenemos para manejo de filas y columnas en CSS Grid, Phil Cupp fue el pionero de este trabajo, él presentó la especificación que dio paso a CSS Grid.
+
+Cabe recalcar que la especificación que presentó Phil Cupp y que venía implementada en Internet Explorer, no es la misma que hoy usamos, ni tampoco es la primera intención de implementar un sistema de grilla en CSS, sin embargo, esta especificación fue la primera en ser implementada en un navegador, sí, Internet Explorer fue el primer navegador con una implementación de grilla.
+
+Lo interesante de aquél trabajo en Microsoft es que atrajo a una serie de personajes muy talentosos quienes en conjunto diseñador y redactaron la especificación moderna de CSS Grid que hoy está disponible en todos los navegadores.
+
+En contraste con Flexbox, el sistema de posicionamiento del CSS Grid está basado en dos dimensiones, filas y columnas.
+
+La idea del Grid, como también solemos conocer al módulo CSS Grid, es que definamos una grilla en la que podamos colocar elementos que ocupen uno o más espacios de la grilla.
+
+Lo que es interesante es que estas grillas pueden tener múltiples formas, podemos tener espacios que se extiendan a lo largo de filas y columnas, esto gracias a que el sistema en sí es de dos dimensiones.
+
+De nuevo, si lo contrastamos con Flexbox, hay que recordar que con dicho sistema sólo es posible controlar cómo se alinearán y colocarán elementos en una fila o en una columna, pero no podemos hacer que el mismo elemento se extienda a través de ambos. Con CSS Grid sí podemos.
+
+Es importante mencionar esto porque aunque los sistemas de grillas han estado presente en las páginas web, quizás desde el inicio con el uso de tablas, nunca habíamos tenido una herramienta tan flexible y poderosa con la que definir esquemas.
+
+Cabe recalcar, por cierto, que los sistemas de Flexbox y CSS Grid no compiten entre sí, más bien se utilizan para solucionar problemas distintos, por lo que ninguno reemplaza al otro, y es importante conocer ambos para sacar el mayor provecho de cada uno.
+
+Para comenzar a usar el sistema del Grid, primero debemos asignar el valor grid a la propiedad display de un elemento, esto significará que los elementos que se coloquen dentro del elemento se ubicarán de acuerdo a las reglas y al comportamiento de CSS Grid.
+
+```css
+display: grid;
+```
+A continuación, vamos a ir detallando cuáles son las propiedades que pertenecen al módulo, a través de las cuales podemos definir, controlar y organizar elementos dentro de una grilla flexible y muy poderosa.
+
 ## Conceptos del CSS Grid
+
+Trabajar con una grilla usando el módulo de CSS Grid implica dos cosas, definir la grilla y posicionar elementos en la grilla.
+
+Definir la grilla significa que vamos a especificar de cuántas columnas y cuántas filas se compondrá la grilla, además del tamaño que tendrá cada fila y cada columna. En la intersección de la definición de estas filas y estas columnas se generan espacios en los que podemos posicionar elementos.
+
+Un par de conceptos muy importantes son los de las líneas y las áreas. Aunque la grilla es virtual, cada línea límite de cada fila y cada columna tiene un nombre, por defecto un número empezando por el 1 que indica en qué posición está la línea, sin embargo, puedes especificar los nombres de estas líneas.
+
+Lo que hace increíble al Grid es el sistema de dos dimensiones, el que nos permite extender elementos a través de múltiples columnas y filas, esto lo hacemos a través de distintos principios que conocerás más adelante, entre ellos indicar la línea en la que inicia un elemento y la línea en la que termine, un indicador de cuántos espacios de la grilla debe usar, etc.
+
+Además, es posible que nosotros definamos áreas dentro de la grilla, es decir, espacios predefinidos que ocupen 1 o varias filas y columnas, eventualmente, podemos indicarle a un elemento que ocupe dicha área.
+
+Tanto las líneas como las áreas de la grilla son elementos virtuales que no se ven y por tanto no afectan el cómo se muestra tu página, sin embargo, estos elementos sirven como referencia para que podamos colocar elementos dentro de la grilla.
+
+En resumen, la grilla tiene un número definido de filas y un número definido de columnas, al final de cada una se coloca una línea a la que podemos asignarle un nombre, si juntamos 1 o más filas o columnas, podemos formar un área, podemos asignar un elemento a dicha área. Las áreas son una alternativa para definir la posición de un elemento, pero no son la única forma, poco a poco las iremos conociendo en los siguientes temas, continuemos.
+
 ## CSS Grid explícito e implícito
+
+Cuando trabajamos con CSS Grid, es posible definir la grilla de dos maneras: explícita e implícita.
+
+Cada vez que nosotros definimos la cantidad de columnas o filas que tendrá la grilla, sin importar que tamaño tengan, estamos definiendo el grid de manera explícita, como en el ejemplo que puedes ver a continuación donde definimos que la grilla tendrá 12 columnas que se dividen el espacio equitativamente:
+
+```css
+grid-template-columns: repeat(12,1fr);
+```
+
+Suponiendo que colocamos más de 12 elementos de la grilla, superando la cantidad de columnas establecidas. En dicho escenario, se creará una nueva fila para colocar los elementos que no cupieron en la primera fila.
+
+1. Esta segunda fila no fue definida explícitamente, por lo que se considera parte del grid implícito.
+
+2. Algunas consideraciones importantes sobre el grid explícito y el grid implícito son:
+
+Es posible definir el grid explícito de tal manera que no sea necesario que exista el grid implícito
+Es posible estilizar las dimensiones del grid implícito con las propiedades `grid-auto-columns` y `grid-auto-rows`, veremos más sobre estas propiedades en los próximos temas
+Es posible acomodar elementos tanto en el grid implícito como en el grid explícito
+En términos prácticas, reconocer la diferencia entre las filas o columnas que se crean explícitamente o implícitamente, está en cómo vas a redimensionar los elementos y en que es posible acomodar elementos en filas o columnas que no has definido, ya que estos elementos usarán el grid implícito
+
 ## Definir filas y columnas
+
+
+
 ## Posicionar elementos en el grid
+
+
+
 ## Nombrando líneas
+
+
+
 ## La función repeat
+
+
+
 ## Unidad flexible: fr
+
+
+
 ## Grid area
+
+
+
 ## Alineamiento
+
+
+
 ## Ordenamiento
+
+
+
 
 # 15. Clases en vivo
 

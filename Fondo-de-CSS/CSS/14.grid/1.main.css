@@ -1,0 +1,9 @@
+.container: {
+  display: grid;
+  height: 300px;
+  width: 500px;
+  background-color: blue;
+  grid-template-color: 200px 300px;
+  grid-template-rows: 100px 200px;
+/*  grid-template: 300px / 200px 300px;  hans-property*/
+}

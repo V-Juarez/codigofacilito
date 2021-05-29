@@ -1,0 +1,3 @@
+[submodule "rust/arreglos"]
+	path = rust/arreglos
+	url = /arreglos

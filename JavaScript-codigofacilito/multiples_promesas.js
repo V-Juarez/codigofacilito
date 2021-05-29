@@ -10,7 +10,7 @@ let saluda = ()=> console.log('Hola a todos');
 //p1.then(function(){
   //  p2.then(function(){
     //    saluda();
-    //})
+    ///})
 //})
 
 

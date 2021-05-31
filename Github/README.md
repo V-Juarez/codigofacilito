@@ -216,30 +216,66 @@ git branch pruebas -d
 
 ## Trabajar con GitHub
 
-
+- [Github](https://github.com)
 
 ## GitHub begins
 
-
+Crear una cuenta
+Crear un reposito junto a un readme.md
+Agrefarle una licencia al proyecto.
 
 ## Subir un proyecto local a GitHub
 
+``` BASH
+# Conectar nuestro repositoro local a remoto
+git remote add origin <link-repositorio>
+```
+
+Verificar que estamos conectados al repositorio remoto
+``` BASH
+#  config
+git remote -v
+```
+
+Subir los archivos al repositorio remoto.
+``` BASH
+# push
+git push -u origin master
+```
+
+Ramas
+``` BASH
+# Crear rama
+git branch pruebas
+
+# Ir a la rama pruebas
+git checkout pruebas
+```
+
+Clonar repositorio
+```bash
+git clone <link>
+```
 
 
 ## Fork de proyectos
 
-
+Crear un fork al repositorio al que quieres colaborar
 
 ## GitHub Teams
 
-
+Crear una organizacion por Github Teams, de manera gratuita. Trabajo en equipo.
 
 ## Todo sobre ISSUES
 
-
+Crear un archivo readme.md , e identificarlos posibles causas de un mal funcionamiento.
+Creaer un nuevo Issues
 
 ## Pull Request
 
+proteger la rama master
+Crear un archivo markdown con las especificaciones.
+Crear un pull request
 
 
 ## Summary tercera unidad

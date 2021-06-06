@@ -13,21 +13,26 @@
     <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
+    <header class="header">
+      <div class="wrapper">
+        <div class="header-content">
+
+          <img src="./img/logo.png" width="70" height="20" alt="Logo encantdor" />
+          <nav class="menu" aria-label="main-navigation">
+            <ul>
+              <li><a href="#main" class="is-active">Hola</a></li>
+              <li><a href="#project">Project</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+          <button class="button">Curriculum</button>
+          <!-- <button class="button is-secundary">Curriculum</button> -->
+        </div>
+      </div>
+    </header>
+
     <div class="wrapper">
-      <header class="header">
-        <img src="./img/logo.png" width="70" height="20" alt="Logo encantdor" />
-        <nav class="menu">
-          <ul>
-            <li><a href="#main" class="is-active">Hola</a></li>
-            <li><a href="#project">Project</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-        <button class="button">Curriculum</button>
-        <!-- <button class="button is-secundary">Curriculum</button> -->
-      </header>
-  
-      <section class="hero" id="main">
+      <section aria-label="main" class="hero" id="main">
         <div class="hero-image">
           <img src="./img/user.png" width="338" height="330" alt="" />
         </div>
@@ -40,52 +45,130 @@
             Frontend Developer que le encanta implenentar design que inspieran y
             atraen a las personas.
           </p>
-          <div class="hero-social">
+          <div class="social">
             <a class="button-icon"><img src="./img/telefono.svg" alt="" /></a>
             <a class="button-icon"><img src="./img/email.svg" alt="" /></a>
             <a class="button-icon"><img src="./img/twitter.svg" alt="" /></a>
             <a class="button-icon"><img src="./img/instagram.svg" alt="" /></a>
           </div>
-          <a href="" class="button">DESCARGAR CURRICULUM</a>  
+          <a href="" class="button">DESCARGAR CURRICULUM</a>
         </div>
       </section>
 
-      <div class="testimony">
-        <div class="testimony-image">
-          <img src="./img/Macbook.png" alt="">
+      <div class="project" id="project">
+        <div class="project-image">
+          <img src="./img/Macbook.png" alt="" />
         </div>
-        <div class="testimony-description">
-          <a class="testimony-title" target="_blank" href="https://codigofacilito.com">Codigo Facilito</a>
-          <p>Accede a mas de 120 proyectos que te ayudaran a mejorar tus habilidades como desarrollador Front-end</p>
+        <div class="project-description">
+          <a class="title" target="_blank" href="https://codigofacilito.com"
+            >Codigo Facilito</a
+          >
+          <p>
+            Accede a mas de 120 proyectos que te ayudaran a mejorar tus
+            habilidades como desarrollador Front-end
+          </p>
           <a target="_blank" href="#" class="button is-secundary">Ver Codigo</a>
-          <a target="_blank" href="#" class="button">Ver Proyecto</a>  
+          <a target="_blank" href="#" class="button">Ver Proyecto</a>
         </div>
       </div>
 
-      <div class="testimony">
-        <div class="testimony-image">
-          <img src="./img/iPad.png" alt="">
+      <div class="project">
+        <div class="project-image">
+          <img src="./img/iPad.png" alt="" />
         </div>
-        <div class="testimony-description">
-          <a class="testimony-title" target="_blank" href="https://codigofacilito.com">Codigo Facilito</a>
-          <p>Accede a mas de 120 proyectos que te ayudaran a mejorar tus habilidades como desarrollador Front-end</p>
+        <div class="project-description">
+          <a class="title" target="_blank" href="https://codigofacilito.com"
+            >Codigo Facilito</a
+          >
+          <p>
+            Accede a mas de 120 proyectos que te ayudaran a mejorar tus
+            habilidades como desarrollador Front-end
+          </p>
           <a target="_blank" href="#" class="button is-secundary">Ver Codigo</a>
-          <a target="_blank" href="#" class="button">Ver Proyecto</a>  
+          <a target="_blank" href="#" class="button">Ver Proyecto</a>
         </div>
       </div>
 
-      <div class="testimony">
-        <div class="testimony-image">
-          <img src="./img/matrix.png" alt="">
+      <div class="project">
+        <div class="project-image">
+          <img src="./img/matrix.png" alt="" />
         </div>
-        <div class="testimony-description">
-          <a class="testimony-title" target="_blank" href="https://codigofacilito.com">Codigo Facilito</a>
-          <p>Accede a mas de 120 proyectos que te ayudaran a mejorar tus habilidades como desarrollador Front-end</p>
+        <div class="project-description">
+          <a class="title" target="_blank" href="https://codigofacilito.com"
+            >Codigo Facilito</a
+          >
+          <p>
+            Accede a mas de 120 proyectos que te ayudaran a mejorar tus
+            habilidades como desarrollador Front-end
+          </p>
           <a target="_blank" href="#" class="button is-secundary">Ver Codigo</a>
-          <a target="_blank" href="#" class="button">Ver Proyecto</a>  
+          <a target="_blank" href="#" class="button">Ver Proyecto</a>
         </div>
       </div>
+
+      <form action="" method="POST" class="form">
+        <div class="form-content">
+          <h2 class="title">Hablemos</h2>
+          <p>
+            Si está interesado en trabajar conmigo en su próximo proyecto, no
+            dude en ponerse en contacto conmigo.
+          </p>
+          <label for="form-name">
+            Nombre Completo
+            <input
+              required
+              name="name"
+              id="forn-name"
+              type="text"
+              placeholder="juan"
+            />
+          </label>
+          <label for="form-name">
+            Correo electronico
+            <input
+              required
+              name="name"
+              id="forn-name"
+              type="email"
+              placeholder="juan@example.com"
+            />
+          </label>
+          <label for="form-name">
+            Mensaje
+            <textarea
+              name="message"
+              placeholder="Mensaje"
+              id=""
+              cols="30"
+              rows="7"
+            ></textarea>
+          </label>
+          <button class="button" type="submit">Enviar mensaje</button>
+        </div>
+      </form>
+
+      <footer class="footer" id="contact">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img
+              src="./img/logo.png"
+              width="70"
+              height="20"
+              alt="Logo encantdor"
+            />
+          </div>
+          <div class="social">
+            <a class="button-icon"><img src="./img/telefono.svg" alt="" /></a>
+            <a class="button-icon"><img src="./img/email.svg" alt="" /></a>
+            <a class="button-icon"><img src="./img/twitter.svg" alt="" /></a>
+            <a class="button-icon"><img src="./img/instagram.svg" alt="" /></a>
+          </div>
+          <div class="footer-copyright">
+            <p>Hecho con el por Leo.</p>
+            <p>Copyright 2021 - Todos los derechos reservados</p>
+          </div>
+        </div>
+      </footer>
     </div>
-
   </body>
 </html>

@@ -1,24 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/index.css">
-</head>
-<body>
-  <header class="header">
-    <img src="./img/logo.png" width="70" height="20" alt="Logo encantdor">
-    <button class="button">Curriculum</button>
-    <button class="button is-secundary">Curriculum</button>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <img src="./img/logo.png" width="70" height="20" alt="Logo encantdor" />
+        <nav class="menu">
+          <ul>
+            <li><a href="#main" class="is-active">Hola</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="button">Curriculum</button>
+        <!-- <button class="button is-secundary">Curriculum</button> -->
+      </header>
+  
+      <section class="hero" id="main">
+        <div class="hero-image">
+          <img src="./img/user.png" width="338" height="330" alt="" />
+        </div>
+        <div class="hero-description">
+          <h1>
+            <span>Hola a todos!</span>
+            <span>Soy Jaume</span>
+          </h1>
+          <p>
+            Frontend Developer que le encanta implenentar design que inspieran y
+            atraen a las personas.
+          </p>
+          <div class="hero-social">
+            <a class="button-icon"><img src="./img/telefono.svg" alt="" /></a>
+            <a class="button-icon"><img src="./img/email.svg" alt="" /></a>
+            <a class="button-icon"><img src="./img/twitter.svg" alt="" /></a>
+            <a class="button-icon"><img src="./img/instagram.svg" alt="" /></a>
+          </div>
+          <a href="" class="button">DESCARGAR CURRICULUM</a>  
+        </div>
+      </section>
 
-  <a class="button-icon"><img src="./img/telefono.svg" alt=""></a>
-  <a class="button-icon"><img src="./img/email.svg" alt=""></a>
-  <a class="button-icon"><img src="./img/twitter.svg" alt=""></a>
-  <a class="button-icon"><img src="./img/instagram.svg" alt=""></a>
-</body>
+      <div class="testimony">
+        <div class="testimony-image">
+          <img src="./img/Macbook.png" alt="">
+        </div>
+        <div class="testimony-description">
+          <a class="testimony-title" target="_blank" href="https://codigofacilito.com">Codigo Facilito</a>
+          <p>Accede a mas de 120 proyectos que te ayudaran a mejorar tus habilidades como desarrollador Front-end</p>
+          <a target="_blank" href="#" class="button is-secundary">Ver Codigo</a>
+          <a target="_blank" href="#" class="button">Ver Proyecto</a>  
+        </div>
+      </div>
+
+      <div class="testimony">
+        <div class="testimony-image">
+          <img src="./img/iPad.png" alt="">
+        </div>
+        <div class="testimony-description">
+          <a class="testimony-title" target="_blank" href="https://codigofacilito.com">Codigo Facilito</a>
+          <p>Accede a mas de 120 proyectos que te ayudaran a mejorar tus habilidades como desarrollador Front-end</p>
+          <a target="_blank" href="#" class="button is-secundary">Ver Codigo</a>
+          <a target="_blank" href="#" class="button">Ver Proyecto</a>  
+        </div>
+      </div>
+
+      <div class="testimony">
+        <div class="testimony-image">
+          <img src="./img/matrix.png" alt="">
+        </div>
+        <div class="testimony-description">
+          <a class="testimony-title" target="_blank" href="https://codigofacilito.com">Codigo Facilito</a>
+          <p>Accede a mas de 120 proyectos que te ayudaran a mejorar tus habilidades como desarrollador Front-end</p>
+          <a target="_blank" href="#" class="button is-secundary">Ver Codigo</a>
+          <a target="_blank" href="#" class="button">Ver Proyecto</a>  
+        </div>
+      </div>
+    </div>
+
+  </body>
 </html>

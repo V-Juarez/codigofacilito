@@ -1,6 +1,10 @@
 @import "./button.css";
 @import "./button-icons.css";
 @import "./header.css";
+@import "./hero.css";
+@import "./wrapper.css";
+@import "./menu.css";
+@import "./testimony.css";
 
 :root {
   --fontBase: 'Poppins', sans-serif;
@@ -22,6 +26,7 @@
 body {
   background: var(--gradient);
   min-block-size: 100vh;
-  font: var(--headline1);
+  font: var(--body1);
+  color: var(--purple)
 }
 

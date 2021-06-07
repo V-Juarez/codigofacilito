@@ -258,13 +258,19 @@ and, or y not
 
 ## Conocer tipos de datos
 
-
+```py
+valor = True
+```
 
 ## Leer valores por teclado
 
-
+```py
+nombre_completo = int('Ingresa tu nombre completo: ')
+print(nombre_completo)
+```
 
 ## Convertir tipos de datos
+
 
 
 
@@ -284,107 +290,245 @@ and, or y not
 
 ## Actualizar elementos
 
+```py
+lista_cursos = ["Python", "Django", "Flask", "Ruby", "Java"]
 
+lista_cursos[4] = 'Rust'
+
+print(lista_cursos)
+```
 
 ## Sublistas
 
+```py
+['Python', 'Django', 'Flask', 'Ruby', 'Rust']
 
-
+# [start:end]
+# [start:] -> obtenemos los ultimos elementos de la lista
+# [:end] -> obtenemos los primeros elementos de la lista
+# [start:end:skip] Saltos [2:3:2] 
+sub_lista = lista_cursos[0:3]
+print(sub_lista)
+```
 ## Modificar listas
 
+```py
+lista_cursos = ['Python', 'Django', 'Flask', 'Ruby', 'Java', 'Rust']
+print(len(lista_cursos))
 
+lista_cursos_2 = ['C', 'C++', 'Heruko']
+
+lista_cursos.append('JavaScript')
+lista_cursos.append('JavaScript')
+lista_cursos.append('C#')
+lista_cursos.insert(1, 'Rails')
+lista_cursos.insert(0, 'PyGame')
+
+lista_cursos.extend(lista_cursos_2)
+
+
+print(lista_cursos)
+print(lista_cursos_2)
+print(len(lista_cursos))
+
+#  eliminar
+
+lista_cursos.remove('Ruby')
+del lista_cursos[0]
+lista_cursos.clear()
+print(lista_cursos)
+print(lista_cursos)
+```
 
 ## Métodos de listas
 
+```py
+lista = [8, 90, 5, 44, 132, 600, 3, 2]
+lista.sort()
+print(lista)
+lista.sort(reverse=True)
+print(lista)
 
+#  Menor o mayor
+lista.sort()
+print(lista[0]) #min
+print(lista[-1]) # max
+
+#  Funciones de numero menor y mayor
+print(min(lista))
+print(max(lista))
+
+#  Conocer que la expresion este en la lista
+print(10 in lista)
+print(5 in lista)
+print(11 not in lista)
+```
 
 ## Index
 
+```py
+lista = [8, 90, 1, 5, 44, 132, 600, 3, 4]
 
+print(5 in lista)
+
+index = lista.index(5)
+print(index)
+```
 
 ## Matrices
 
+```py
 
+columna_a = [10, 20, 80, 90]
+columna_b = [30, 40, 50, 100]
+
+matrix = [columna_a, columna_b]
+
+print(matrix)
+```
 
 # 3. Tuplas
 
 ## ¿Qué son las tuplas?
 
-
+```py
+#  inmutables
+tupla = ('String', 10, 15.4, True, [1, 2, 3,], (4, 5, 6))
+print(type(tupla))
+print(tupla)
+```
 
 ## Índices de tuplas
 
+```py
+#  inmutables
+tupla = ('String', 10, 15.4, True, [1, 2, 3,], (4, 5, 6))
 
+primer_tupla = tupla[0]
+print(primer_tupla)
+ultimo_tupla = tupla[-1]
+print(ultimo_tupla)
+
+sub_tupla = tupla[:3]
+print(sub_tupla)
+```
 
 ## Listas y tuplas
 
+```py
 
+```
 
 ## Desempaquetado
 
 
+```py
+
+```
 
 ## Zip
 
 
+```py
+
+```
 
 # 4. Strings
 
 ## Strings con listados
 
 
+```py
+
+```
 
 ## Concatenar pt1
 
 
+```py
+
+```
 
 ## Concatenar pt2
 
 
+```py
+
+```
 
 ## Validar sub strings
 
 
+```py
+
+```
 
 ## Función print
 
+```py
+
+```
 
 
 ## FString
 
 
+```py
+
+```
 
 ## Justificar texto
 
 
+```py
+
+```
 
 # 5. Diccionarios
 
 ## ¿Qué son los diccionarios?
 
 
+```py
+
+```
 
 ## Diccionarios
 
 
+```py
+
+```
 
 ## Obtener elementos
 
 
+```py
+
+```
 
 ## Llaves, Items y valores
 
 
+```py
+
+```
 
 ## Eliminar elementos
 
 
+```py
+
+```
 
 # 6. Ciclos y condiciones
 
 ## Tipo None
 
 
+```py
+
+```
 
 ## Valores falsos
 

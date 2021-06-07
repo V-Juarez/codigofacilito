@@ -451,9 +451,12 @@ print(sub_tupla)
 
 ## Concatenar pt2
 
-
 ```py
+nombre = 'Eduardo Ismaiel'
+apellido = 'Garcia'
 
+nombre_completo = 'Mr. {} {}.'.format(nombre, apellido)
+print(nombre_completo)
 ```
 
 ## Validar sub strings

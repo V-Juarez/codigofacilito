@@ -1,5 +1,7 @@
 // import math
 @use 'sass:math';
+@use 'sass:string';
+@use 'sass:meta';
 
 // numeros
 $variable: 100;
@@ -9,12 +11,13 @@ $pixeles: 100px;
 @debug 'El valor es igual a #{ 100 * 100 }';
 
 
+@debug meta.type-of($strings-sincomillas);
 
 // division
 $division: 10px / 2px; // grid no division
 $division: 10px / 2px;
 $selector: 'h1';
-$strings-comillas: "header header header";
+$strings-comillas: header header header;
 $strings-sincomillas: center;
 
 body {
@@ -24,9 +27,9 @@ body {
 }
 
 .title {
-  text-align: $strings-sincomillas;
+  text-align: string.quote($strings-sincomillas);
 }
 
 .grid {
-  grid-template-areas: $strings-comillas;
+  grid-template-areas: '#{$strings-comillas}';
 }

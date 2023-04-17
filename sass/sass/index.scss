@@ -3,6 +3,7 @@
   $secondary: black
 ) ;
 @use '001-property' as property;
+@use '02-interpolation' as interpolation;
 
 body {
   font-family: "Arial";

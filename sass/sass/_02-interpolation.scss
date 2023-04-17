@@ -1,0 +1,17 @@
+$selector: '.hero';
+$propiedad: 'grid-template-columns';
+$color: 'green';
+$rem: 16;
+
+
+:root {
+  --color: #{$color};
+}
+// interpolation | custom properties
+// #{ $variable }
+#{$selector}{
+  color: #000;
+  #{$propiedad}: #fff;
+  #{$propiedad}: $rem * 2rem;
+}
+

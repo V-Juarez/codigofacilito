@@ -2,6 +2,16 @@
   --primary: pink;
 }
 
+:root {
+  --color: green;
+}
+
+.hero {
+  color: #000;
+  grid-template-columns: #fff;
+  grid-template-columns: 32rem;
+}
+
 body {
   font-family: "Arial";
   color: red;

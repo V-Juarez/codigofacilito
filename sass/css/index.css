@@ -107,6 +107,19 @@ input:checked + .show {
 }
 
 body {
+  font-size: 5px;
+  animation-duration: 5;
+}
+
+.title {
+  text-align: center;
+}
+
+.grid {
+  grid-template-areas: "header header header";
+}
+
+body {
   font-family: "Arial";
   color: red;
 }

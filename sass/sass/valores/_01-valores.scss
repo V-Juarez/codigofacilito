@@ -1,6 +1,32 @@
+// import math
+@use 'sass:math';
+
 // numeros
 $variable: 100;
 $pixeles: 100px;
 
 @debug 'El valor es igual a' 100 * 100;
 @debug 'El valor es igual a #{ 100 * 100 }';
+
+
+
+// division
+$division: 10px / 2px; // grid no division
+$division: 10px / 2px;
+$selector: 'h1';
+$strings-comillas: "header header header";
+$strings-sincomillas: center;
+
+body {
+  font-size: math.div(25,5) * 1px;
+  // string '' | ""
+  animation-duration: $division;
+}
+
+.title {
+  text-align: $strings-sincomillas;
+}
+
+.grid {
+  grid-template-areas: $strings-comillas;
+}

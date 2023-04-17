@@ -1,0 +1,21 @@
+@use 'sass:meta';
+@use 'sass: list';
+
+$color: hsla(228,7%, 86%, .7);
+
+@debug meta.type-of($color);
+
+$boxshadow: 1px 2px 20px;
+@debug meta.type-of($boxshadow);
+
+$margin: 10px 20px 40px 30px;
+@debug meta.type-of($boxshadow);
+
+
+// position
+.grid {
+  margin-top: list.nth($margin, 1);
+  margin-bottom: list.nth($margin, 3);
+  margin-left: list.nth($margin, 4);
+  margin-right: list.nth($margin, 2);
+}

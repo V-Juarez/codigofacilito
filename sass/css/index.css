@@ -138,6 +138,10 @@ button {
   color: teal;
 }
 
+.grid {
+  display: grid;
+}
+
 body {
   font-family: "Arial";
   color: red;

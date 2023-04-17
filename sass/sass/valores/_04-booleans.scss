@@ -1,0 +1,24 @@
+$condicional: true;
+$message: 'Hola mundo';
+
+// false, null
+@debug $condicional;
+
+@if($message) {
+  .grid{
+    display: grid;
+  }
+}
+@else {
+  .flexbox {
+    display: flex;
+  }
+}
+
+@debug "Result " 100 > 80;
+@debug "Result " 100 < 80;
+@debug "Result " 100 >= 80;
+@debug "Result " 100 <= 80;
+@debug "Result " 100 == 80;
+@debug "color: " #000 == rgb(0,0,0);
+@debug "diferente"  'hola' != 'mundo'

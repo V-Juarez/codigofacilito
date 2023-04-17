@@ -1,0 +1,6 @@
+// numeros
+$variable: 100;
+$pixeles: 100px;
+
+@debug 'El valor es igual a' 100 * 100;
+@debug 'El valor es igual a #{ 100 * 100 }';

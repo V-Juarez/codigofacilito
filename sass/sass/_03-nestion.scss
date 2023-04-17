@@ -1,0 +1,49 @@
+// .hero nav {
+//   display: flex;
+// }
+
+// .hero nav li {
+//   list-style-type: none;
+// }
+
+// .hero nav li a {
+//   text-decoration: none;
+// }
+
+/* 
+.hero {
+  background-color: steelblue;
+
+  nav {
+    display: flex;
+  }
+
+  .container {
+    background-color: #000;
+
+    a {
+      text-decoration: none;
+
+      span {
+        font-weight: 10px;
+      }
+    }
+  }
+}
+ */
+
+.hero .main {
+  font-size: 2rem;
+  
+  .cta {
+    color: #000;
+
+    .title {
+      font-size: 4rem;
+    }
+  }
+
+  :not(&){
+    opacity: 0;
+  }
+}

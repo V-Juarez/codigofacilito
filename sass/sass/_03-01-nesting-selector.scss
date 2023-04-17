@@ -1,0 +1,46 @@
+.card {
+  > .item {
+    display: none;
+  }
+
+  span {
+    font-weight: bold;
+  }
+}
+
+input:checked {
+  + .show {
+    transform: unset;
+  }
+}
+
+.menu {
+  ~ {
+    .close {
+      display: none;
+    }
+    
+    .open {
+      display: block;
+    }
+  }
+    
+  a {
+    text-decoration: none;
+  }
+
+  @media (min-width:500px) {
+    background-color: steelblue;
+    text-decoration: none;
+    display: grid;
+    a {
+      text-decoration: none;
+    }
+  }
+
+  @keyframes show {
+    100%{
+      transform: unset;
+    }
+  }
+}

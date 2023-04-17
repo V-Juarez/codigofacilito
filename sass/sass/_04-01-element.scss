@@ -1,0 +1,29 @@
+.card {
+  color: teal;
+
+  &--grid {
+    display: grid;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__cta {
+    color: crimson;
+  }
+
+  &:hover {
+    color: royalblue;
+
+    &--green {
+      color: greenyellow;
+    }
+  }
+
+  @media screen {
+    .card {
+      color: orange;
+    }
+  }
+}

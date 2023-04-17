@@ -1,0 +1,18 @@
+.card {
+  color: teal;
+
+  a {
+    color: #0000;
+
+    &.hover {
+      color: cyan;
+    }
+  }
+  &.hover {
+    color: crimson;
+  }
+
+  &::after {
+    content: '';
+  }
+}

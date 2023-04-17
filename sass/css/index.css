@@ -1,0 +1,22 @@
+:root {
+  --primary: pink;
+}
+
+body {
+  font-family: "Arial";
+  color: red;
+}
+
+h1 {
+  color: red;
+}
+
+.title {
+  color: var(--primary);
+}
+
+h2 {
+  color: red;
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,23 @@
+@use '01-variables' as variables with (
+  $primary: red  ,
+  $secondary: black
+) ;
+@use '001-property' as property;
+
+body {
+  font-family: "Arial";
+  color: variables.$primary;
+}
+
+h1 {
+  color: variables.$primary;
+}
+
+.title {
+  // use property
+  color: var(--primary);
+}
+
+h2 {
+  color: variables.$primary;
+}

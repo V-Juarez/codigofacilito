@@ -11,5 +11,3 @@ description.innerHTML = "Listado de cursos";
 //   let element = items[i];
 //   console.log(element)
 // }
-
-

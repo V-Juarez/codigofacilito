@@ -38,8 +38,10 @@ function create_card_by_innerHTML(title, description) {
   row.innerHTML += html;
 }
 
+let div = null;
+
 function create_card(title, description){
-  let div = document.createElement('div');
+  div = document.createElement('div');
   div.className = 'col-sm-6 col-md-4';
 
   let thumbnail = document.createElement('div')
@@ -60,6 +62,10 @@ function create_card(title, description){
 
   a.textContent = 'eliminar'
 
+  // eliminar
+  p2.addEventListener('click', delete_card)
+
+
   // agregar methos
   p2.appendChild(a)
   caption.appendChild(h3)
@@ -72,3 +78,19 @@ function create_card(title, description){
 
   row.appendChild(div)
 }
+
+function delete_card(e){
+  // ancestor
+  let ancestor = get_ancestors(e.target, 4)
+  // El padre y elemento a eliminar {hijo}
+  row.removeChild(ancestor)
+}
+
+function get_ancestors(ancestor, level) {
+  if(level == 0) {
+    return ancestor;
+  }
+  level--;
+  return get_ancestors(ancestor.parentElement, level  )
+}
+

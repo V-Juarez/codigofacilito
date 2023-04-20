@@ -4,33 +4,37 @@ const div_row = document.querySelector('.row')
 const div_container = document.querySelector('.container')
 const body = document.querySelector('body')
 
-/* element.addEventListener('click', function() {
+element.addEventListener('click', function() {
   console.log('Elemento')
 })
-list.addEventListener('click', function() {
+list.addEventListener('click', function(e) {
   console.log('Lista')
+  e.stopPropagation();
 })
-div_row.addEventListener('click', function() {
+div_row.addEventListener('click', function(e) {
   console.log('Div Row')
+  e.stopPropagation();
 })
-div_container.addEventListener('click', function() {
+div_container.addEventListener('click', function(e) {
   console.log('Div container')
+  e.stopPropagation();
 })
-body.addEventListener('click', function() {
+body.addEventListener('click', function(e) {
   console.log('body')
+  e.stopPropagation();
 })
- */
 
-/* element.addEventListener('click', show_messages);
+
+/* element.addEventListener('click', show_messages, e);
 list.addEventListener('click', show_messages);
 div_row.addEventListener('click', show_messages);
 div_container.addEventListener('click', show_messages);
-body.addEventListener('click', show_messages);
- */
+body.addEventListener('click', show_messages); */
 
-for(let element of document.querySelectorAll('*')){
+
+/* for(let element of document.querySelectorAll('*')){
   element.addEventListener('click', show_messages)
-}
+} */
 
 function show_messages(e) {
   console.log("Elemento actual", this.tagName)

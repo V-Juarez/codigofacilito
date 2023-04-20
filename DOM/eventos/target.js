@@ -17,3 +17,12 @@ button.addEventListener("click", function (e) {
     this.textContent = 'Ocultar'
   }
 });
+
+console.log("hola")
+
+button.addEventListener('mouseenter', function(){
+  this.className = 'btn btn-danger'
+})
+button.addEventListener('mouseout', function(){
+  this.className = 'btn btn-primary'
+})

@@ -6,10 +6,9 @@ description.textContent = 'Listado de cursos'
 
 const items = document.querySelectorAll('li:nth-child(even)');
 
-for(let element of document.querySelectorAll('*')){
-  element.addEventListener('click', show_messages)
-}
+for (var i = 0; i < items.length; i++) {
 
+}
 const row = document.querySelector('.row')
 const form = document.getElementById('course-form')
 
@@ -37,5 +36,4 @@ function create_card(title, description) {
     </div>
   `;
   row.innerHTML += html;
-
 }

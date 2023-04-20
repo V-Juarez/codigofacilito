@@ -48,9 +48,23 @@
         <p class="description_container" id="description">
           <strong> Breve descripcion. </strong>
         </p>
+        <input type="text" id="input">
         <button class="btn btn-primary">Ocultar</button>
       </div>
     </div>
+
+    <form id="course-form">
+      <div class="form-group">
+        <input type="text" class="form-control" id="title-form" placeholder="Titulo">
+      </div>
+
+      <div class="form-group">
+        <input type="text" class="form-control" id="description-form" placeholder="Descripcion">
+        <small id="descriptionHelp" class="form-text text-muted">Escribe una breve descripcion</small>
+
+        <button class="btn btn-info" id="create-course">Crear curso</button>
+      </div>
+    </form>
 
     <div class="row">
       <ul class="list-group">
@@ -87,5 +101,7 @@
     <script type="module" src="./target.js"></script>
     <!-- <script type="module" src="./mouse.js"></script> -->
     <script type="module" src="./timeout.js"></script>
+    <script type="module" src="./key.js"></script>
+    <script type="module" src="./submite.js"></script>
   </body>
 </html>

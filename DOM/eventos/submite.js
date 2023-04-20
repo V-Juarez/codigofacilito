@@ -8,3 +8,10 @@ form.addEventListener('submit', function(e){
   console.log(title)
   console.log(description)
 });
+
+const checkbox = document.getElementById('checkbox')
+let title_form = document.getElementById('title-form')
+
+title_form.addEventListener('change', function() {
+  console.log('Cambo de valor' )
+})

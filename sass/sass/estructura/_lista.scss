@@ -1,0 +1,11 @@
+$lista:
+  'card', color 3s,
+  'nav', clip-path, 2s,
+  'footer', margin 1s;
+
+@each $selector, $propiedades, $duracion in $lista{
+  .#{$selector}{
+    transition-property: $propiedad;
+    transition-duration: $duracion;
+  }
+}

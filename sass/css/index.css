@@ -1,162 +1,19 @@
-:root {
-  --primary: pink;
-}
+/* Error: Undefined variable.
+ *   ,
+ * 5 |   .elemento-#{$dianmica} {
+ *   |               ^^^^^^^^^
+ *   '
+ *   sass/estructura/_each.scss 5:15  @use
+ *   sass/estructura/_index.scss 3:1  @use
+ *   sass/index.scss 11:1             root stylesheet */
 
-:root {
-  --color: green;
-}
-
-.hero {
-  color: #000;
-  grid-template-columns: #fff;
-  grid-template-columns: 32rem;
-}
-
-/* 
-.hero {
-  background-color: steelblue;
-
-  nav {
-    display: flex;
-  }
-
-  .container {
-    background-color: #000;
-
-    a {
-      text-decoration: none;
-
-      span {
-        font-weight: 10px;
-      }
-    }
-  }
-}
- */
-.hero .main {
-  font-size: 2rem;
-}
-.hero .main .cta {
-  color: #000;
-}
-.hero .main .cta .title {
-  font-size: 4rem;
-}
-:not(.hero .main) {
-  opacity: 0;
-}
-
-.card > .item {
-  display: none;
-}
-.card span {
-  font-weight: bold;
-}
-
-input:checked + .show {
-  transform: unset;
-}
-
-.menu ~ .close {
-  display: none;
-}
-.menu ~ .open {
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
   display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a   \2577 \a 5 \2502    .elemento-#{$dianmica} {\a   \2502                ^^^^^^^^^\a   \2575 \a   sass/estructura/_each.scss 5:15  @use\a   sass/estructura/_index.scss 3:1  @use\a   sass/index.scss 11:1             root stylesheet";
 }
-.menu a {
-  text-decoration: none;
-}
-@media (min-width: 500px) {
-  .menu {
-    background-color: steelblue;
-    text-decoration: none;
-    display: grid;
-  }
-  .menu a {
-    text-decoration: none;
-  }
-}
-@keyframes show {
-  100% {
-    transform: unset;
-  }
-}
-
-.card {
-  color: teal;
-}
-.card--grid {
-  display: grid;
-}
-.card__title {
-  text-align: center;
-}
-.card__cta {
-  color: crimson;
-}
-.card:hover {
-  color: royalblue;
-}
-.card:hover--green {
-  color: greenyellow;
-}
-@media screen {
-  .card .card {
-    color: orange;
-  }
-}
-
-body {
-  font-size: 5px;
-  animation-duration: 5;
-}
-
-.title {
-  text-align: "center";
-}
-
-.grid {
-  grid-template-areas: "header header header";
-}
-
-.grid {
-  margin-top: 10px;
-  margin-bottom: 40px;
-  margin-left: 30px;
-  margin-right: 20px;
-}
-
-h1 {
-  color: royalblue;
-}
-
-h2 {
-  color: green;
-}
-
-button {
-  color: teal;
-}
-
-.grid {
-  display: grid;
-}
-
-body {
-  font-family: "Arial";
-  color: red;
-}
-
-h1 {
-  color: red;
-}
-
-.title {
-  color: var(--primary);
-}
-
-h2 {
-  color: red;
-}
-
-/*# sourceMappingURL=index.css.map */

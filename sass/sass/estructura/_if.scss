@@ -1,0 +1,21 @@
+
+$display: grid;
+.hero {
+  @if $display == grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  @else {
+    display: $display;
+  }
+}
+
+// @mixin display($display){
+//   @if $display == grid {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//   }
+//   @else {
+//     display: $display;
+//   }
+// }

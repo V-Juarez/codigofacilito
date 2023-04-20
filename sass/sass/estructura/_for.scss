@@ -1,0 +1,33 @@
+// through
+@for $dinamico from 1 to 10{
+  // $dinamico: 1
+  .selector-#{$dinamico} {
+    color: crimson;
+  }
+}
+
+@for $iterador from 1 through 5 {
+  .animation__name--#{$iterador} {
+    animation-name: name#{$iterador};
+    animation-duration: 1s * $iterador;
+
+    @keyframes name#{$iterador} {
+      100%{
+        transform: translate(100% * $iterador)
+      }
+    }
+  }
+}
+
+@for $iterador from 1 through 5 {
+  .grid__item--#{$iterador} {
+    @if($iterador == 5) {
+      grid-row: 2/3;
+      grid-column: 1/-1;
+    }
+    @else {
+      grid-row: 1/2;
+      grid-column: #{$iterador} / #{$iterador};
+    }
+  }
+}

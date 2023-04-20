@@ -1,0 +1,29 @@
+$lista: 1 2 3 4 5;
+$margenes: 1 2 3 4 5 6;
+
+@each $dinamica in $lista{
+  .elemento-#{$dianmica} {
+    color: #000;
+  }
+}
+
+@each $margen in $margenes {
+  .m-#{$margen}{
+    margin: $margin*1em;
+  }
+}
+$mapa: (
+  "primary": crimson,
+  "secondary": steelblue,
+  "shadow": 1px 1px solid #000,
+);
+
+@each $clave, $valor in $estilos {
+  .#{$clave}{
+    @if($clave != 'shadow'){
+      color: $valor;
+    }@else{
+      box-shadow: $valor;
+    }
+  }
+}

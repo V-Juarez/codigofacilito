@@ -1,0 +1,40 @@
+@use 'sass:meta';
+
+@mixin crear-layout($lista...){
+  @each $propiedad, $valor in meta.keywords($lista){
+    #{$propiedad}: $valor;
+  }
+}
+
+.hero {
+  @include crear-layout($display: grid, $color: red, $gap: 1em);
+}
+
+
+// blockque de contenido
+
+@mixin crear-layout($rows, $column){
+  $color: #fff;
+  $background: royalblue;
+  display: grid;
+  grid-template-rows: repeat($rows, 1fr);
+  grid-template-columns: repeat($columns, 1fr);
+
+  @media (max-width: 500px) {
+    @content($color, $background );
+  }
+}
+
+
+.hero {
+  @include crear-layout(5, 6) using ($rows, $color, $background){
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: $rows;
+    color: $color;
+    background-color: $background;
+
+    &__title {
+      background-color: #fff;
+    }
+  }
+}

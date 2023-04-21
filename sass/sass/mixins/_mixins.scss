@@ -1,0 +1,32 @@
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  @include center;
+}
+
+.footer {
+  @include center;
+}
+
+@mixin crear-rid($rows, $columns, $gap){
+  display: grid;
+  grid-template-rows: repeat($rows, 1fr);
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+}
+
+$files: 4;
+$columns: 9;
+$gutters: 30px;
+
+.header  {
+  @include crear-rid(6, 5, 20px);
+}
+
+.footer {
+  @include crear-rid($columns, $filas, $gutters, )
+}

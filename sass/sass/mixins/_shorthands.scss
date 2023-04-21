@@ -1,0 +1,26 @@
+@mixin addImage($img, $repeat, $size){
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background: {
+    image: url($img);
+    repeat: $repeat;
+    size:  $size;
+  }
+
+  animation:  {
+    duration: 1s;
+    name: show;
+    delay: .5s;
+  }
+
+  margion: {
+    top: 0px;
+    left: 0;
+  }
+}
+
+.hero {
+  @include addImage('uno.png', no-repeat, cover);
+}

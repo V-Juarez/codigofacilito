@@ -30,3 +30,27 @@ $gutters: 30px;
 .footer {
   @include crear-rid($columns, $filas, $gutters, )
 }
+
+
+
+
+// valores opcionales
+@mixin grid-generator($selector, $column-i:1, $columna-e:1, $validar:true) {
+
+  @if(!$validar){
+    display: grid;
+  }
+
+  &__#{$selector}{
+    grid-column: #{$column-i} / #{$columna-e, false};
+  }
+}
+
+.hero {
+  @include grid-generator(img);
+  @include grid-generator(title, 3, -1);
+}
+
+.footer {
+  @include grid-generator($selector:grid, $column-i:1, $validar: false; )
+}

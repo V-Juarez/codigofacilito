@@ -9,6 +9,7 @@
 @use '04-01-element' as element;
 @use 'valores/valores' as valores;
 @use 'estructura/index' as estructura;
+@use 'mixins/index' as mixin;
 
 body {
   font-family: "Arial";

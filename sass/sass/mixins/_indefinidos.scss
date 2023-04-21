@@ -1,0 +1,16 @@
+@mixin addTransition($propiedad, $valor, $selectors...) {
+  // @debug $selectors;
+  @each $slectors in $selectores {
+    
+    #{$selector}{
+      #{$propiedad}: $valor;
+      &:hover{
+        #{$propiedad}: unset;
+      }
+    }
+  }
+}
+
+// @include addTransition(opacity,0,h1,h2,h2,a);
+@include addTransition(opacity,0,'.hero','.cta','.id');
+

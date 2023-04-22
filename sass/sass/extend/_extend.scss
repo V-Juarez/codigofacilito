@@ -1,0 +1,24 @@
+.textos {
+  line-height: 1.7;
+  letter-spacing: 1.5;
+  text-align: left;
+  overflow-wrap: break-word;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &::before {
+    content: 'hola';
+  }
+}
+
+.hero__title {
+  @extend .textos;
+  font-size: 2rem;
+}
+
+.hero__copy {
+  @extend .textos;
+  font-size: 4rem;
+}

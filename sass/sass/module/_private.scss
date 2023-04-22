@@ -1,0 +1,9 @@
+@function _sumarElementos($valores...){
+  $suma: 0;
+
+  @each $elementoSuma in $valores {
+    $suma: $suma + $elementoSuma; 
+  }
+
+  @return $suma * 1px;
+}

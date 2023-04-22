@@ -1,8 +1,12 @@
 @use 'sass:map';
-@use './color';
+@use './color' with (
+  $primary: yellow,
+  $secondary: orange,
+);
 @use './color2';
 
 @use  './mixins';
+@use './private';
 
 .hero {
   color: color.$primary;
@@ -22,3 +26,8 @@ $textos: (
 $stilosGenerales: map.merge($textos, color.$primary);
 
 @include mixins.recorrerMap($stilosGenerales);
+
+body {
+  color: color.$primary;
+  background-color: color.$secondary;
+}

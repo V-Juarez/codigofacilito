@@ -1,0 +1,24 @@
+@use 'sass:map';
+@use './color';
+@use './color2';
+
+@use  './mixins';
+
+.hero {
+  color: color.$primary;
+  background-color: color2.$primary;
+}
+
+// use module
+// @use 'module/module';
+
+$textos: (
+  "titulo": 4em,
+  "subtitulo": 2em,
+  "parrafo": 1em,
+  "cta": 1.3em,
+);
+
+$stilosGenerales: map.merge($textos, color.$primary);
+
+@include mixins.recorrerMap($stilosGenerales);

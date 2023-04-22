@@ -1,0 +1,14 @@
+@use 'sass:map';
+@use 'sass:meta';
+
+@mixin recorrerMap($map) {
+  @each $clave, $valor in $mapa{
+    .#{$clave}{
+      @if(met.type-of($valor)== color) {
+        color: $valor;
+      } @else {
+        font-size: $valor;
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@use 'sass:math';
+
+@function pixelesToEm($pixeles){
+  $unidad: math.div($pixeles, 1px);
+  $resultado: math.div($unidad, 16);
+
+  @return $resultado * 1em;
+}
+
+.title {
+  font-size: pixelesToEm(40px);
+}

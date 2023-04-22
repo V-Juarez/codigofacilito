@@ -1,0 +1,15 @@
+@use "sass:math";
+
+@mixin container($padding:40px 0) {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: $padding;
+}
+
+@function pixeles-rem($pixeles) {
+  $resultado: math.div($pixeles, 16) * 1rem;
+
+  @return $resultado;
+}

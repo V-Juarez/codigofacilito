@@ -1,0 +1,13 @@
+@use "mixfun";
+
+.nav {
+  @include mixfun.container(30px 0);
+  position: relative;
+  z-index: 100;
+
+  &__logo{
+    width: 40%;
+    max-width: 200px;
+    display: block;
+  }
+}

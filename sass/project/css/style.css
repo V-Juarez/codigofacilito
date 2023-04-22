@@ -1,0 +1,83 @@
+:root {
+  --font-headings: "Open Sans", sans-serif;
+  --font-main: "Poppins", sans-serif;
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  min-height: 100vh;
+  background-color: var(--violet);
+  position: relative;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background-image: url("../images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+.hero__container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 40px 0;
+  position: relative;
+  z-index: 10;
+  display: grid;
+  gap: 3.125rem;
+  text-align: center;
+}
+.hero__img {
+  width: 100%;
+  display: block;
+  max-width: 0 auto;
+  margin: 0 auto;
+}
+.hero__title {
+  color: #fff;
+}
+.hero__title {
+  font-family: var(--font-headings);
+  font-size: 1.75rem;
+}
+.hero__texts {
+  color: #fff;
+}
+.hero__paragraph {
+  line-height: 1.5;
+  margin: 1.2rem 0;
+}
+.hero__cta {
+  display: inline-block;
+  color: var(--violet);
+  background-color: #fff;
+  padding: 15px 75px;
+}
+
+.nav {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 30px 0;
+  position: relative;
+  z-index: 100;
+}
+.nav__logo {
+  width: 40%;
+  max-width: 200px;
+  display: block;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,59 @@
+@use 'mixfun';
+
+.hero {
+  min-height: 100vh;
+  background-color: var(--violet);
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    background-image: url('../images/bg-mobile.svg');
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
+
+  &__container {
+    @include mixfun.container;
+    position: relative;
+    z-index: 10;
+    display: grid;
+    gap: mixfun.pixeles-rem(50);
+    text-align: center;
+  }
+
+  &__img {
+    width: 100%;
+    display: block;
+    max-width: 0 auto;
+    margin: 0 auto;
+  }
+
+  &__title {
+    color: #fff;
+  }
+
+  &__title {
+    font-family: var(--font-headings);
+    font-size: mixfun.pixeles-rem(28);
+  }
+  &__texts {
+    color: #fff;
+  }
+
+  &__paragraph {
+    line-height: 1.5;
+    margin: 1.2rem 0;
+  }
+
+  &__cta {
+    display: inline-block;
+    color: var(--violet);
+    background-color: #fff;
+    padding: 15px 75px;
+  }
+}

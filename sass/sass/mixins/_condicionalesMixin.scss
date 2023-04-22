@@ -1,0 +1,31 @@
+@mixin crearLayout($display, $columnas) {
+  @if($display == grid) {
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+  }
+
+  @else if($display == block) {
+    display: block;
+  }
+
+  @else if($display == inline-block) {
+    display: inline-block;
+  }
+
+  @else {
+    display: flex;
+    $tamanoColumnas: math.div(100%, $columnas);
+
+    & > * {
+      width: $tamanoColumnas;
+    }
+  }
+}
+
+.main {
+  @include crearLayout(grid, 8);
+}
+
+.hero {
+  @include crearLayout(block,6)
+}

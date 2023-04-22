@@ -1,0 +1,36 @@
+// condicionales
+@use 'sass:math';
+$global: yellow;
+
+@if($global == red) {
+  $global: black;
+}
+
+.color {
+  color: $global;
+}
+
+@mixin elegirColor($numero) {
+  @if($numero == 1) {
+    color: crimson;
+  }
+  @else if($numero == 2) {
+    color: steelblue;
+  }
+  @else if($numero == 3) {
+    color: teal;
+  }
+  @else {
+    color: black;
+  }
+}
+
+.main {
+  @include elegirColors(1);
+}
+
+// operadores booleanods
+
+@debug true;
+@debug not true;
+@debug false;

@@ -1,0 +1,34 @@
+@use 'sass:list';
+$margins: 1 2 3 4 5;
+
+@each $margin in $margins{
+  .mt-#{$margin} {
+    margin: $margin*1em;
+  }
+}
+
+// nuevo valoar de la lista
+
+$nuevaLista: list.append($margins, 7);
+
+$paddingsA: 10px 20px;
+$paddingsB: 30px 40px;
+
+$paddingAll: list.append($paddingsA, $paddingsB);
+
+.body {
+  margin: $nuevaLista;
+  padding: $paddingAll;
+}
+
+$colores: red green yellow;
+$offset: top left;
+@debug list.index($colores, red);
+
+.hero {
+  @if(list.index($offset, top)){
+    margin-top: $auto;
+  } @else {
+    margin-bottom: auto;
+  }
+}

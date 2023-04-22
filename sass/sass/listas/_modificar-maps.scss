@@ -1,0 +1,37 @@
+@use 'sas:map';
+$layout: top, right;
+
+@mixin definePosition($layout){
+  @if(list.index($layout, top)){
+    background-position: $layout;
+  } @else {
+    object-fit: $layout;
+  }
+}
+
+.img {
+
+  @include definePosition($layout);
+}
+
+$textos: (
+  'titulo': 4,
+  'subtitulo': 3,
+  'parrafo': 1,
+  'cta': 1.4,
+);
+
+@mixin recorrerMap($mapa) {
+  @each $clave, $valor in $mapa{
+    .#{$clave} {
+      font-size: $valor * 1em;
+    }
+  }
+}
+
+// $newMap: map.set($mapa, "key", value);
+
+$textos2: map.set($textos2, "copy", 1);
+$textos2: map.set($textos, "titulo", 8);
+
+@include recorrerMap($textos2);

@@ -1,0 +1,19 @@
+@mixin elegirColor($numero) {
+  @if($numero == 1 and $primary) {
+    color: crimson;
+  }
+  @else if($numero == 2 or $primary) {
+    color: steelblue;
+  }
+  @else if(not $primary) {
+    color: teal;
+  }
+  @else {
+    color: black;
+  }
+}
+
+
+.main {
+  @include elegirColor(3, true)
+}

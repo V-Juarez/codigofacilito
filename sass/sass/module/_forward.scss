@@ -1,0 +1,8 @@
+@forward 'color' with (
+  $primary: yellow,
+  $secondary: orange,
+);
+@forward 'mixin';
+@forward 'color2' as color-*;
+// @forward 'private' hide sumarElementos, $colores;
+@forward 'private' show sumarElementos, $colores;

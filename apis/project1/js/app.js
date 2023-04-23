@@ -87,10 +87,60 @@ async function cargarImagen() {
 }
 
 function dibujar() {
-  context.drawImage(video, 0, 0, canvas.width, canvas.height);
+  // context.drawImage(video, 0, 0, canvas.width, canvas.height);
+  
+  drewImageProp(context, video);
+
   if (imagenCargada) {
     context.drawImage(imagenCargada, 0, 0, canvas.width, canvas.height);
   }
 
   requestAnimationFrame(dibujar);
+}
+
+function drewImageProp(ctx, img, x, y, w, h, offsetX, offsetY) {
+  if (arguments.length ===2 ) {
+    x = y = 0;
+    w = ctx.canvas.width
+    h = ctx.canvas.height
+  }
+
+  offsetX = typeof offsetX === "number" ? offsetX : 0.5;
+  offsetY = typeof offsetY === "number" ? offsetY : 0.5;
+
+  if (offsetX < 0) offsetX = 0;
+  if (offsetY < 0) offsetY = 0;
+  if (offsetX > 1) offsetX = 1;
+  if (offsetY > 1) offsetY = 1;
+
+
+  var iw = img.videoWidth,
+  ih = img.videoHeight,
+  r = Math.min(w / iw, h / ih),
+  nw = iw * r,
+  nh = ih * r,
+  cx, cy, cw, ch, ar = 1;
+
+  // decide which gap to fill
+  if (nw < w) ar = w /nw;
+  if (Math.abs(ar - 1) < 1e-14 && nh < h) ar = h /nh; // updated
+  nw *= ar;
+  nh *= ar;
+
+
+  // calc source rectangle
+  cw = iw / (nw / w);
+  ch = ih / (nh / h);
+
+  cx = (iw - cw) * offsetX;
+  cy = (ih - ch) * offsetY;
+
+  // make sure source rectangle is valid
+  if (cx < 0) cx = 0;
+  if (cy < 0) cy = 0;
+  if (cw > iw) cw = iw;
+  if (ch > ih) ch = ih;
+
+  // fill image in dest, rectangle
+  ctx.drawImage(img, cx, cy, cw, ch, x, y, w, h);
 }

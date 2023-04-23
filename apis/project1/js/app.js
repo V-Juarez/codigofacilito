@@ -1,5 +1,9 @@
 // DOM API
 let video = document.querySelector('.video-source')
+// Canvas
+let canvas = document.querySelector('#canvas')
+let context = canvas.getContext('2d')
+let imagenCargada;
 
 async function solicitarPermisosCamara(){
   // getUserMedia
@@ -10,16 +14,22 @@ async function solicitarPermisosCamara(){
 }
 
 async function cargarImagen(){
-  
+  let image = document.createElement('img')
+  image.src = '../image/frame.png'
+  await image.decode();
+  imagenCargada = image;
+
+  dibujar()
+}
+
+function dibujar() {
+  if(imagenCargada){
+    context.drawImage(imagenCargada, 0, 0, 100, 200)
+  }
+
 }
 
 solicitarPermisosCamara();
-
-// Canvas
-
-let canvas = document.querySelector('#canvas')
-let context = canvas.getContext('2d')
-
-context.fillStyle = 'red'
-context.fillRect(40,40,100,200)
+cargarImagen();
+dibujar();
 

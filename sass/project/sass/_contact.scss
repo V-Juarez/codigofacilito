@@ -8,16 +8,25 @@
   position: relative;
   z-index: 10;
 
+  @include mixfun.media{
+    justify-content: flex-end;
+  }
+
   &__link {
     border: 1px solid #fff;
     width: 35px;
     height: 35px;
     border-radius: 50%;
+    display: flex;
     justify-content: center;
     align-items: center;
-    
-    @include mixfun.media{
-      justify-content: flex-end;
+
+    &--img {
+      width: 90px;
+      height: 40px;
+      color: #fff;
+      background-color: #fff;
+      border-radius: 25px;
     }
   }
 }

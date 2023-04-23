@@ -60,6 +60,7 @@
   &__paragraph {
     line-height: 1.5;
     margin: 1.2rem 0;
+    font-family: var(--font-main);
   }
 
   &__cta {
@@ -69,5 +70,6 @@
     padding: 15px 75px;
     text-decoration: none;
     border-radius: 30px;
+    cursor: pointer;
   }
 }

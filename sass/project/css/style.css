@@ -71,6 +71,7 @@
 .hero__paragraph {
   line-height: 1.5;
   margin: 1.2rem 0;
+  font-family: var(--font-main);
 }
 .hero__cta {
   display: inline-block;
@@ -79,6 +80,7 @@
   padding: 15px 75px;
   text-decoration: none;
   border-radius: 30px;
+  cursor: pointer;
 }
 
 .nav {
@@ -108,18 +110,26 @@
   position: relative;
   z-index: 10;
 }
+@media (min-width: 768px) {
+  .contact {
+    justify-content: flex-end;
+  }
+}
 .contact__link {
   border: 1px solid #fff;
   width: 35px;
   height: 35px;
   border-radius: 50%;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
-@media (min-width: 768px) {
-  .contact__link {
-    justify-content: flex-end;
-  }
+.contact__link--img {
+  width: 90px;
+  height: 40px;
+  color: #fff;
+  background-color: #fff;
+  border-radius: 25px;
 }
 
 /*# sourceMappingURL=style.css.map */

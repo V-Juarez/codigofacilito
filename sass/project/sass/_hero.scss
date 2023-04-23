@@ -13,8 +13,14 @@
     right: 0;
     height: 60%;
     background-image: url('../images/bg-mobile.svg');
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     z-index: 0;
+
+    @include mixfun.media{
+      background-image: url('../images/bg-desktop.svg');
+      height: 100%;
+    }
   }
 
   &__container {
@@ -24,6 +30,12 @@
     display: grid;
     gap: mixfun.pixeles-rem(50);
     text-align: center;
+
+    @include mixfun.media{
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      text-align: start;
+    }
   }
 
   &__img {
@@ -55,5 +67,7 @@
     color: var(--violet);
     background-color: #fff;
     padding: 15px 75px;
+    text-decoration: none;
+    border-radius: 30px;
   }
 }

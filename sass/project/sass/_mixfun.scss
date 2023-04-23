@@ -8,6 +8,12 @@
   padding: $padding;
 }
 
+@mixin media{
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
 @function pixeles-rem($pixeles) {
   $resultado: math.div($pixeles, 16) * 1rem;
 

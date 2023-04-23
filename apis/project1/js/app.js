@@ -12,6 +12,7 @@ redimensionarCanvas();
 solicitarPermisosCamara();
 cargarImagen();
 dibujar();
+enlistarCamaras();
 
 botonFoto.addEventListener("click", function (ev) {
   let url = canvas.toDataURL("image/jpeg");
@@ -29,15 +30,43 @@ function redimensionarCanvas() {
   canvas.height = camara.clientHeight;
 }
 
+async function enlistarCamaras() {
+  let camarasDisponibles = await navigator.mediaDevices.enumerateDevices();
+  camarasDisponibles = camarasDisponibles.filter(device => device.kind === "videoinput")
+  let select = document.createElement('select')
+
+  camarasDisponibles.forEach(camara => {
+    let option = document.createElement('option')
+    option.innerHTML = camara.label;
+    option.value = camara.deviceId;
+    select.appendChild(option);
+  });
+
+  select.addEventListener('change', function(ev) {
+    solicitarPermisosCamara(select.value)
+  })
+  document.querySelector('body').appendChild(select)
+  console.log(camarasDisponibles)
+}
+
 // Solcitar permisos para la camara => Leer la camara y mostrarla en el video
-async function solicitarPermisosCamara() {
+async function solicitarPermisosCamara(deviceId) {
   // getUserMedia
+
+  let constrainst = {};
+  if(deviceId) {
+    constrainst = {
+      video: { deviceId: deviceId }
+    }
+  } else {
+    constrainst = { video: true }
+  }
   /*
    * @ getUserMedia => Solicita perisos para la camara y el micro y retorna un
    *   MediaStream
    * */
 
-  let mediaStream = await navigator.mediaDevices.getUserMedia({ video: true });
+  let mediaStream = await navigator.mediaDevices.getUserMedia(constrainst);
   // API video
   //
   // Stream sera la fuente de dattos para el elemento video

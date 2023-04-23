@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+#canvas {
+  border: 3px solid blue;
+}
+
+.camara {
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  aspect-ratio: 9/16;
+  overflow: hidden;
+  border: solid 1px red;
+}
